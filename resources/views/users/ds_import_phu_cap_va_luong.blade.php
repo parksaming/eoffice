@@ -214,7 +214,7 @@
                                     </div>
                                 </div>
                                 <div style="margin-top: 35px; text-align: center;">
-                                    <a class="btn btn-primary btn-done" href="{{ url('import-luong') }}"
+                                    <a class="btn btn-primary btn-done" href="{{ url('quan-ly-luong-thue') }}"
                                        style="display: none;">Hoàn thành</a>
                                 </div>
                             @else
