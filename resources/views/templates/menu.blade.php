@@ -11,7 +11,8 @@ use App\Models\CheckUser;
                     <span class="icon-bar"></span>                        
                 </button>
                 <li class="dropdown">
-                    <a class="dropbtn" style=" border-right: 1px solid #fff;" href="{{url('dashboard')}}" title=""><i class="fa fa-home" aria-hidden="true"></i> &nbsp;Trang chủ</a>
+{{--                    {{url('dashboard')}}--}}
+                    <a class="dropbtn" style=" border-right: 1px solid #fff;" href="" title=""><i class="fa fa-home" aria-hidden="true"></i> &nbsp;Trang chủ</a>
                 </li>
                 <li class="dropdown" style="display: none;">
                     <a class="dropbtn" style=" border-right: 1px solid #fff;" data-toggle="dropdown" title=""><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;Office 365 </a>
