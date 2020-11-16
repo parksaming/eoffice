@@ -1,7 +1,7 @@
 <div class="header clearfix" id="fixnav" >
    <div class="col-sm-4 col-md-4">
         <div class="page-logo hidden-xs hidden-sm" style="margin-top: 10px;">
-            <a href="{{url('dashboard')}}" id="lgo" >
+            <a href="#" id="lgo" >
                 <img alt="logo" class="logo-default" src="{{asset('img/header-ute.png') }}" />
             </a>
 
@@ -10,7 +10,7 @@
     <div class=" col-sm-8 col-md-8">
         <h4 class="header-right col-sm-12">
             <strong style="padding-top: 1000px;">
-                <a style="color: #fff; float: right; margin-top: 5px;" href="{{ url('dashboard') }}">Điều hành tác nghiệp</a>
+                <a style="color: #fff; float: right; margin-top: 5px;" href="#">Điều hành tác nghiệp</a>
             </strong>
         </h4 >
         <nav class="navbar-right col-sm-12" style="margin-top: -5px;">
@@ -20,20 +20,20 @@
                             <span class="current-time df-icon-size" style="color: #fff; background: url(./img/icon_lich.svg) no-repeat; padding-left: 20px">{{ date('d/m/Y') }}</span>
                         </a>
                     </li>
-                    <li class="dropdown notification">
-                        <a href="javascript:;" id="dropdownMenuButton" data-toggle="dropdown">
-                            <span style="color: #fff;" class="glyphicon glyphicon-bell" aria-hidden="true"></span>
-                            <span class="badge notification-count hidden">0</span>
-                        </a>
-                        <div class="dropdown-menu">
-                            <div class="notification-container">
-                                <ul class="notifications"></ul>
-                                <div class="notifications-menu">
-                                    <a href="javascript:;" onclick="xemTatca()">Xem tất cả</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+{{--                    <li class="dropdown notification">--}}
+{{--                        <a href="javascript:;" id="dropdownMenuButton" data-toggle="dropdown">--}}
+{{--                            <span style="color: #fff;" class="glyphicon glyphicon-bell" aria-hidden="true"></span>--}}
+{{--                            <span class="badge notification-count hidden">0</span>--}}
+{{--                        </a>--}}
+{{--                        <div class="dropdown-menu">--}}
+{{--                            <div class="notification-container">--}}
+{{--                                <ul class="notifications"></ul>--}}
+{{--                                <div class="notifications-menu">--}}
+{{--                                    <a href="javascript:;" onclick="xemTatca()">Xem tất cả</a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </li>--}}
 
                     <script>
                         function getNotifications() {
@@ -62,7 +62,7 @@
                             
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="https://portal.office.com/account/#personalinfo" title=""><i style="padding: 3px" class="fa fa-user-o" aria-hidden="true"></i>Cập nhật thông tin</a></li>
+{{--                            <li><a href="https://portal.office.com/account/#personalinfo" title=""><i style="padding: 3px" class="fa fa-user-o" aria-hidden="true"></i>Cập nhật thông tin</a></li>--}}
                             <li><a href="javascript:;" onclick="logout()" title=""><i style="padding: 3px" class="fa fa-key" aria-hidden="true"></i>Đăng xuất</a></li>
                         </ul>
                     </li>
