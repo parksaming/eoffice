@@ -2,7 +2,7 @@
    <div class="col-sm-4 col-md-4">
         <div class="page-logo hidden-xs hidden-sm" style="margin-top: 10px;">
             <a href="{{url('dashboard')}}" id="lgo" >
-                <img alt="logo" class="logo-default" src="{{asset('img/logo.png') }}" />
+                <img alt="logo" class="logo-default" src="{{asset('img/header-ute.png') }}" />
             </a>
 
         </div>
