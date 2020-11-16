@@ -322,7 +322,8 @@ class LoginController extends Controller
         //$url = $getUrlLogout->GetLogoutUrl();
 
         //return redirect($url);
-        Auth::logout();
+        $request->session()->flush();
+
         return redirect('dang-nhap');
     }
     public function logout_by_sso(Request $request){
