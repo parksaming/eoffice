@@ -3,7 +3,7 @@
 // Home
 Route::get('/',function () {
     if (session('user')) {
-        return redirect(route('danhsach.vanbanden'));
+        return redirect(route('import_luong'));
     }else{
         return redirect('dang-nhap');
     }

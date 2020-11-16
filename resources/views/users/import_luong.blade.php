@@ -58,7 +58,11 @@
                             <?php endforeach;?>
                         </td>
                         <td class="text-center">
-                            <a href="javascript:;" onclick="showModalSendMail('{{$status}}', '{{$dateMonth}}')" title="Gửi mail"><i class="fa fa-envelope <?php echo $value['sendMail'] == 1 ? 'colorSendMail':''?>" aria-hidden="true"></i></a>
+                            @if($value['sendMail'] == 1)
+                                <a style="pointer-events: none;" href="javascript:;" onclick="showModalSendMail('{{$status}}', '{{$dateMonth}}')" title="Gửi mail"><i class="fa fa-envelope <?php echo $value['sendMail'] == 1 ? 'colorSendMail':''?>" aria-hidden="true"></i></a>
+                            @else
+                                <a href="javascript:;" onclick="showModalSendMail('{{$status}}', '{{$dateMonth}}')" title="Gửi mail"><i class="fa fa-envelope <?php echo $value['sendMail'] == 1 ? 'colorSendMail':''?>" aria-hidden="true"></i></a>
+                            @endif
                         </td>
                         <td class="text-center">
                            <a href="{{route($path, $value['date'])}}" title="Xem chi tiết"><i class="fa fa-eye"> </i></a>
