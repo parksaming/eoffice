@@ -526,7 +526,7 @@ Route::group(['middleware' => ['role_admin']], function () {
     Route::get('them-tai-khoan', 'UserController@them_tai_khoan')->name('them_tai_khoan');
     Route::get('sua-tai-khoan/{userId}', 'UserController@sua_tai_khoan')->name('sua_tai_khoan');
     Route::post('save-tai-khoan', 'UserController@save_tai_khoan')->name('save_tai_khoan');
-    Route::get('import-luong', 'UserController@import_luong')->name('import_luong');
+    Route::get('quan-ly-luong-thue', 'UserController@import_luong')->name('import_luong');
     Route::post('import_update_thu_thue', 'UserController@import_update_thu_thue')->name('import_update_thu_thue');
     Route::post('process_import_tong_hop_thu_nhap', 'UserController@process_import_tong_hop_thu_nhap')->name('process_import_tong_hop_thu_nhap');
     Route::post('import_update_luong_phu_cap', 'UserController@import_update_luong_phu_cap')->name('import_update_luong_phu_cap');
