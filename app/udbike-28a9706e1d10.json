@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "udbike",
+  "private_key_id": "28a9706e1d10f8ae238d7f1905d9f3da2f402ac6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDblD1hJQzqT4Or\nCqhg6C7lu4yqxK+rmjpZI/mgC1m2qcabPiL791cGnT83mT84OGmUUxZwTzW0Irh2\nsaL8d9lqOBqlcyyOYKhvEnIFOiP2r4TP2IhJl0nChB0HrNeysZxwOzi89MuGhlOd\ntgC+4Szupwn1MGUOQ18ZSIQ0FiTtOuG0evIwisxY6JAYaTtH0q2jMBpWBnimaKug\nh1nf3GcfszDlWjYN/hBdti0BWBgzkKfSMpJMsOgBMwi3SM3h7J3WLwanJ+WB2exg\njVQOEQf/nfNZjMPUqfvlddgem14SdwT1kl1ymaBpgAKkC5XyEOnW84Svo1TFijeW\nsjWkfuCzAgMBAAECggEAJN0JwvXf6bRos/3pj79bJDls37x+i44sbouyHFLbgGWX\nULfJUsjPBO7ATrq9GNirrPmYAkniB7huhIrFBKKwTvtVSeKAn/SNQnxzxPniUMdd\nwjEljElIWk4ou4Gigr77twHSQDLOumpxvj/wdxtBml1TuCSkSpU38XwxqbbwAx14\nbDBUNPK/4a2bleU0NVrNJbDz9wOjm8uj5CQuAkjKHpt+dm71YSxz+Sgmc7AiUinh\nfpRTh9ZJJ9AtIEiV207xyjHIQqDdDLKGyANmMoeuKevGYxZlQsjP5vi8M5bnfwky\nRdbvZP2EnqidKe6/Z5riGDWrhgxVcqzurM6IsTkfMQKBgQDuARqE/ESdo0iSbRAp\nXG+90M1J+mESf3RKEePJevIvKobf3za5Zo7nXeoAuWdrys4JWezfyOV8plZJvZAo\nk1XUhY6RKKnVx3ZB5GuxWjFdOZwixFJgYAJ4lPLtabP2Gt1T9LG6JLlZqNxKBngE\nkUtSmjOGFriwVAsjUul9NbqoYwKBgQDsLn2PUcc9QNiPPfMHOgq05a8arMnzBsIh\ndeF2rEHwZq5Ae4ZR2bsOHHLSz1HZh4zMOeV74QsLWeaN/J/xr1D+UKAHkbVdLxjW\nn068Dd0Fj4ceT53xF49DkRZD9vIzQZYZ3nLPZdH/zlO1ZFQ25PWHV+6MF9r7xA1U\nABge34xPcQKBgCFf2j4nud95FCYkUQ3bvneZng/vokkbwkzYsV6BdRCUIBGolV3u\nOb/L9ZJgbVY6PCYnjAXdgAC4uoTgpiRqdLC2gcVtNFOcAsM+qrNV+HIgL/rYGM0W\n6YHLMT2FgwzRu5OYTovRtoQSH8Hpok7RqQROR0dYTFG9l0o+yCscq64NAoGBALP1\neJaLqVRy5I/AlD0dbKsJl7KrlfUnYSQ9vd2+wz95/awEcwRK8sx9wMAAWE13i0DR\nnJoXj2LGzXXC19w/yWb95/HchGTMThC6sjN4HMDv6/SclavuV6sUEfMXZtTHVKfB\nZ5m/65MOk5nTKJfrPWozBgCY7LKJX95xc++SRkcBAoGAGS8SXb4hDwisE6ZByhTv\noIVsnNNj/xvyWonzQZKZlyWrwQJjIW9zTY5WC/3M2A+2z9R3RDl93mYQEPDcfJUr\n05NNYc5Dd4c0zo+V5JUI56FJ0/lz90+/HVvV7XBNhIbv+4tzCUZIuyI9A3b0n/Mq\nbWnRKjegfJxmcJcfavAMHXg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "vision@udbike.iam.gserviceaccount.com",
+  "client_id": "110032162206316018912",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/vision%40udbike.iam.gserviceaccount.com"
+}

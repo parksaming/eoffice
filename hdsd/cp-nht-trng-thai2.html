@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hướng dẫn</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- This line includes the general project style sheet (not required) -->
+    <link type="text/css" href="css/default.css" rel="stylesheet" />
+
+    <!-- This block defines the styles of the TOC headings, change them as needed -->
+    <style type="text/css">
+        body {
+            font-size: 1em;
+        }
+
+        .heading1 {
+            color: #000;
+            text-decoration: none;
+            font-family: 'Times New Roman',Times,Georgia,serif;
+            font-size: 20px;
+            font-weight: bold;
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            line-height: 30px;
+        }
+
+        .heading2 {
+            color: #000;
+            text-decoration: none;
+            font-family: 'Times New Roman',Times,Georgia,serif;
+            font-size: 20px;
+            font-weight: normal;
+            /*font-weight: bold;*/
+        }
+
+        .heading3 {
+            color: #000;
+            text-decoration: none;
+            font-family: 'Times New Roman',Times,Georgia,serif;
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        .heading4 {
+            color: #000;
+            text-decoration: none;
+            font-family: 'Times New Roman',Times,Georgia,serif;
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        .heading5 {
+            color: #000;
+            text-decoration: none;
+            font-family: 'Times New Roman',Times,Georgia,serif;
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        .heading6 {
+            color: #000;
+            text-decoration: none;
+            font-family: 'Times New Roman',Times,Georgia,serif;
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        .hilight1 {
+            color: #FFFFFF;
+            background: #9f224e;
+            text-decoration: none;
+            font-family: 'Times New Roman',Times,Georgia,serif;
+            font-size: 20px;
+            padding-top: 3px;
+            padding-right: 6px;
+            padding-bottom: 3px;
+            padding-left: 3px;
+        }
+
+        .hilight2 {
+            color: #FFFFFF;
+            background: #9f224e;
+            text-decoration: none;
+            font-family: 'Times New Roman',Times,Georgia,serif;
+            font-size: 20px;
+            padding-top: 3px;
+            padding-right: 3px;
+            padding-bottom: 3px;
+            padding-left: 3px;
+        }
+
+        .hilight3 {
+            color: #FFFFFF;
+            background: #9f224e;
+            text-decoration: none;
+            font-family: 'Times New Roman',Times,Georgia,serif;
+            font-size: 20px;
+            padding-top: 3px;
+            padding-right: 6px;
+            padding-bottom: 3px;
+            padding-left: 3px;
+        }
+
+        .hilight4 {
+            color: #FFFFFF;
+            background: #9f224e;
+            text-decoration: none;
+            font-family: 'Times New Roman',Times,Georgia,serif;
+            font-size: 20px;
+            padding-top: 3px;
+            padding-right: 6px;
+            padding-bottom: 3px;
+            padding-left: 3px;
+        }
+
+        .hilight5 {
+            color: #FFFFFF;
+            background: #9f224e;
+            text-decoration: none;
+            font-family: 'Times New Roman',Times,Georgia,serif;
+            font-size: 20px;
+            padding-top: 3px;
+            padding-right: 6px;
+            padding-bottom: 3px;
+            padding-left: 3px;
+        }
+
+        .hilight6 {
+            color: #FFFFFF;
+            background: #9f224e;
+            text-decoration: none;
+            font-family: 'Times New Roman',Times,Georgia,serif;
+            font-size: 20px;
+            font-weight: normal;
+            padding-top: 3px;
+            padding-right: 6px;
+            padding-bottom: 3px;
+            padding-left: 3px;
+        }
+
+        /* TOC LIST CSS */
+        #toc {
+            padding: 0;
+            margin: 0;
+        }
+
+            #toc li {
+                margin-top: 2px;
+                margin-left: 0;
+                padding: 1px;
+            }
+
+            #toc ul {
+                padding-left: 0;
+                margin-left: 0px;
+            }
+        /* TOC LIST CSS */
+
+        @media (pointer: coarse) {
+            body {
+                transform-origin: 0 0;
+                transform: scale(1.25);
+                max-width: 80%;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/helpman_settings.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var hiTest = /^hilight/im,
+                 parentScope = (parent.hmNavigationFrame);
+            if (parentScope) parent.currentNav("toc");
+            $("a[class^='heading']").on("click", function (event) {
+                var doSwipe = (hiTest.test($(this).children("span").first().attr("class")) || false || (parentScope && !parent.hmBrowser.nonDeskTouch));
+                if (doSwipe && parentScope) {
+                    window.parent.showNav("toggle");
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        var parentScope = (parent.hmNavigationFrame);
+        if (!parentScope) {
+            var s = document.createElement("script");
+            s.setAttribute("type", "text/javascript");
+            s.setAttribute("src", "helpman_navigation.js");
+            document.getElementsByTagName("head")[0].appendChild(s);
+        }
+        else {
+            if (initialtocstate != "expandall") parent.hmAddCss(document, "#toc li ul { display: none }");
+        }
+        function loadicons() { var icons = new Array(); for (i = 0; i < arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+        function loadtoc() { if (parentScope) parent.loadstate(document.getElementById("toc")); else loadstate(document.getElementById("toc")); }
+        function savetoc() { if (parentScope) parent.savestate(document.getElementById("toc")); else savestate(document.getElementById("toc")); }
+        function clicked(node, event) { deselect(); if (parentScope) parent.hmNodeClicked(node, event); else hmNodeClicked(node, event); }
+        function dblclicked(node) { if (parentScope) parent.hmNodeDblclicked(node); else hmNodeDblclicked(node); }
+        function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+        $(document).ready(function () {
+            loadtoc();
+            $(window).onunload = savetoc;
+        });
+    </script>
+</head>
+<body>
+    <ul id="toc" style="list-style-type:none;display:block;padding-left:0">
+        <li class="heading1" id="i1" data-bg="../cicon1.png;../cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:8px" onclick="return clicked(this,event)">
+            <a class="heading1" id="a1" href="hung-dn-chung.html?v=4" target="hmcontent"><span class="heading1" id="s1" ondblclick="return dblclicked(this)">I. Hướng dẫn chung</span></a>
+            <ul id="ul1" style="list-style-type:none">
+                <li class="heading2" id="i1.1" data-bg="../cicon1.png;../cicon2.png" style="background:url(../img/icon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a1.1" href="gii-thiu-tng-quan.html?v=4" target="hmcontent"><span class="heading2" id="s1.1" ondblclick="return dblclicked(this)">1. Giới thiệu tổng quan</span></a>
+                    <ul id="ul1.1" style="list-style-type:none">
+                        <li class="heading3" id="i1.1.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a1.1.1" href="mo-hinh-hot-dng-va-tinh-nang.html?v=4" target="hmcontent"><span class="heading3" id="s1.1.1">Mô hình hoạt động và tính năng</span></a>
+                        </li>
+                        <li class="heading3" id="i1.1.2" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a1.1.2" href="cu-truc-chuong-trinh.html?v=4" target="hmcontent"><span class="heading3" id="s1.1.2">Cấu trúc chương trình</span></a>
+                        </li>
+                      <!-- <li class="heading3" id="i1.1.3" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a1.1.3" href="video-gii-thiu-tng-quan.html?v=4" target="hmcontent"><span class="heading3" id="s1.1.3">Video giới thiệu tổng quan</span></a>
+                        </li>-->
+                    </ul>
+                </li>
+                <li class="heading2" id="i1.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a1.2" href="dang-nhp-h-thng.html?v=4" target="hmcontent"><span class="heading2" id="s1.2" ondblclick="return dblclicked(this)">2. Đăng nhập hệ thống</span></a>
+                    <ul id="ul1.2" style="list-style-type:none">
+                        <li class="heading3" id="i1.2.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a1.2.1" href="hung-dn-dang-nhp.html?v=4" target="hmcontent"><span class="heading3" id="s1.2.1">Hướng dẫn đăng nhập</span></a>
+                        </li>
+                       <!-- <li class="heading3" id="i1.2.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a1.2.2" href="video-hung-dn.html?v=4" target="hmcontent"><span class="heading3" id="s1.2.2">Video hướng dẫn</span></a>
+                        </li>-->
+                    </ul>
+                </li>
+                <li class="heading2" id="i1.3" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a1.3" href="qun-ly-thong-tin-ca-nhan.html?v=4" target="hmcontent"><span class="heading2" id="s1.3" ondblclick="return dblclicked(this)">3. Quản lý thông tin cá nhân</span></a>
+                    <ul id="ul1.3" style="list-style-type:none">
+                        <li class="heading3" id="i1.3.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a1.3.1" href="cp-nht-thong-tin-ca-nhan.html?v=4" target="hmcontent"><span class="heading3" id="s1.3.1" ondblclick="return dblclicked(this)">3.1. Cập nhật thông tin cá nhân</span></a>
+                            <ul id="ul1.3.1" style="list-style-type:none">
+                                <li class="heading4" id="i1.3.1.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a1.3.1.1" href="cp-nht-thong-tin-ca-nhan2.html?v=4" target="hmcontent"><span class="heading4" id="s1.3.1.1">Cập nhật thông tin cá nhân</span></a>
+                                </li>
+                               <!-- <li class="heading4" id="i1.3.1.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a1.3.1.2" href="video-hung-dn2.html?v=4" target="hmcontent"><span class="heading4" id="s1.3.1.2">Video hướng dẫn</span></a>
+                                </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i1.3.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a1.3.2" href="thay-di-mt-khu.html?v=4" target="hmcontent"><span class="heading3" id="s1.3.2" ondblclick="return dblclicked(this)">3.2. Thay đổi mật khẩu</span></a>
+                            <ul id="ul1.3.2" style="list-style-type:none">
+                                <li class="heading4" id="i1.3.2.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a1.3.2.1" href="thay-di-mt-khu2.html?v=4" target="hmcontent"><span class="heading4" id="s1.3.2.1">Thay đổi mật khẩu</span></a>
+                                </li>
+                               <!-- <li class="heading4" id="i1.3.2.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a1.3.2.2" href="video-hung-dn3.html?v=4" target="hmcontent"><span class="heading4" id="s1.3.2.2">Video hướng dẫn</span></a>
+                                </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i1.3.3" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a1.3.3" href="laylaimatkhau.html?v=4" target="hmcontent"><span class="heading3" id="s1.3.3" ondblclick="return dblclicked(this)">3.3. Lấy lại mật khẩu</span></a>
+                        </li>
+                    </ul>
+                </li>
+               <!-- <li class="heading2" id="i1.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a1.4" href="laylaimatkhau.html?v=4" target="hmcontent"><span class="heading2" id="s1.4" ondblclick="return dblclicked(this)">4. Lấy lại mật khẩu</span></a>
+                </li>-->
+            </ul>
+        </li>
+        <li class="heading1" id="i2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:8px" onclick="return clicked(this,event)">
+            <a class="heading1" id="a2" href="hung-dn-van-thu.html?v=4" target="hmcontent"><span class="heading1" id="s2" ondblclick="return dblclicked(this)">II. Hướng dẫn Văn thư</span></a>
+            <ul id="ul2" style="list-style-type:none">
+                <li class="heading2" id="i2.5" style="background:url(../img/cicon1.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a2.5" href="tng-quan-hung-dn-van-thu.html?v=4" target="hmcontent"><span class="heading2" id="s2.5">1. Tổng quan</span></a>
+                </li>
+                <li class="heading2" id="i2.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a2.1" href="qun-ly-danh-mc.html?v=4" target="hmcontent"><span class="heading2" id="s2.1" ondblclick="return dblclicked(this)">2. Quản lý danh mục</span></a>
+                    <ul id="ul2.1" style="list-style-type:none">
+                        <li class="heading3" id="i2.1.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a2.1.1" href="qun-ly-danh-mc-co-quan-gi_-nhn.html?v=4" target="hmcontent"><span class="heading3" id="s2.1.1" ondblclick="return dblclicked(this)">2.1. Quản lý Cơ quan gửi, nhận</span></a>
+                            <ul id="ul2.1.1" style="list-style-type:none">
+                                <li class="heading4" id="i2.1.1.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.1.1.1" href="qun-ly-co-quan-gi_-nhn.html?v=4" target="hmcontent"><span class="heading4" id="s2.1.1.1">Quản lý cơ quan gửi, nhận</span></a>
+                                </li>
+                                <!-- <li class="heading4" id="i2.1.1.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a2.1.1.2" href="video-hung-dn4.html?v=4" target="hmcontent"><span class="heading4" id="s2.1.1.2">Video hướng dẫn</span></a>
+                                 </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i2.1.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a2.1.2" href="qun-ly-s-van-bn.html?v=4" target="hmcontent"><span class="heading3" id="s2.1.2" ondblclick="return dblclicked(this)">2.2. Quản lý Sổ văn bản</span></a>
+                            <ul id="ul2.1.2" style="list-style-type:none">
+                                <li class="heading4" id="i2.1.2.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.1.2.1" href="qun-ly-s-van-bn2.html?v=4" target="hmcontent"><span class="heading4" id="s2.1.2.1">Quản lý sổ văn bản</span></a>
+                                </li>
+                                <!--<li class="heading4" id="i2.1.2.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.1.2.2" href="video-hung-dn5.html?v=4" target="hmcontent"><span class="heading4" id="s2.1.2.2">Video hướng dẫn</span></a>
+                                </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i2.1.3" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a2.1.3" href="qun-ly-danh-mc-nhom-s-van-bn.html?v=4" target="hmcontent"><span class="heading3" id="s2.1.3" ondblclick="return dblclicked(this)">2.3. Quản lý nhóm số văn bản</span></a>
+                            <ul id="ul2.1.3" style="list-style-type:none">
+                                <li class="heading4" id="i2.1.3.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.1.3.1" href="hung-dn-qun-ly-nhom-s-dn-van-b.html?v=4" target="hmcontent"><span class="heading4" id="s2.1.3.1">Quản lý nhóm số đến văn bản</span></a>
+                                </li>
+                                <!-- <li class="heading4" id="i2.1.3.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a2.1.3.2" href="video-hung-dn6.html?v=4" target="hmcontent"><span class="heading4" id="s2.1.3.2">Video hướng dẫn</span></a>
+                                 </li>-->
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="heading2" id="i2.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a2.2" href="qun-ly-van-bn-dn.html?v=4" target="hmcontent"><span class="heading2" id="s2.2" ondblclick="return dblclicked(this)">3. Quản lý văn bản đến</span></a>
+                    <ul id="ul2.2" style="list-style-type:none">
+                        <li class="heading3" id="i2.2.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a2.2.1" href="vao-s-van-bn.html?v=4" target="hmcontent"><span class="heading3" id="s2.2.1" ondblclick="return dblclicked(this)">3.1. Vào sổ văn bản</span></a>
+                            <ul id="ul2.2.1" style="list-style-type:none">
+                                <li class="heading4" id="i2.2.1.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.2.1.1" href="them-mi-van-bn-giy-dn2.html?v=4" target="hmcontent"><span class="heading4" id="s2.2.1.1" ondblclick="return dblclicked(this)">3.1.1	Vào sổ văn bản giấy đến</span></a>
+                                    <ul id="ul2.2.1.1" style="list-style-type:none">
+                                        <!--  <li class="heading5" id="i2.2.1.1.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.2.1.1.1" href="them-mi-van-bn-giy-dn2.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.1.1.1">Vào sổ văn bản giấy đến</span></a>
+                                         </li>
+                                        <li class="heading5" id="i2.2.1.1.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.2.1.1.2" href="video-hung-dn16.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.1.1.2">Video hướng dẫn</span></a>
+                                         </li>-->
+                                    </ul>
+                                </li>
+                                <!-- <li class="heading4" id="i2.2.1.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a2.2.1.2" href="them-mi-van-bn-bi-dn.html?v=4" target="hmcontent"><span class="heading4" id="s2.2.1.2" ondblclick="return dblclicked(this)">3.1.2.Thêm mới văn bản bì đến</span></a>
+                                     <ul id="ul2.2.1.2" style="list-style-type:none">
+                                         <li class="heading5" id="i2.2.1.2.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.2.1.2.1" href="them-mi-van-bn-bi-dn2.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.1.2.1">Thêm mới văn bản bì đến</span></a>
+                                         </li>
+                                         <li class="heading5" id="i2.2.1.2.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.2.1.2.2" href="video-hung-dn17.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.1.2.2">Video hướng dẫn</span></a>
+                                         </li>
+                                     </ul>
+                                 </li>-->
+                                <li class="heading4" id="i2.2.1.3" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.2.1.3" href="nhn-van-bn-din-t-dn2.html?v=4" target="hmcontent"><span class="heading4" id="s2.2.1.3" ondblclick="return dblclicked(this)">3.1.2 Vào sổ văn bản điện tử đến</span></a>
+                                    <ul id="ul2.2.1.3" style="list-style-type:none">
+                                        <!--  <li class="heading5" id="i2.2.1.3.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                              <a class="heading5" id="a2.2.1.3.1" href="nhn-van-bn-din-t-dn2.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.1.3.1">Vào sổ văn bản điện tử đến</span></a>
+                                          </li>
+                                          <li class="heading5" id="i2.2.1.3.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                              <a class="heading5" id="a2.2.1.3.2" href="video-hung-dn18.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.1.3.2">Video hướng dẫn</span></a>
+                                          </li>-->
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i2.2.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a2.2.2" href="tim-kim-van-bn3.html?v=4" target="hmcontent"><span class="heading3" id="s2.2.2" ondblclick="return dblclicked(this)">3.2. Chuyển xử lý</span></a>
+                            <!--<ul id="ul2.2.2" style="list-style-type:none">
+                                <li class="heading4" id="i2.2.2.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.2.2.1" href="tim-kim-van-bn3.html?v=4" target="hmcontent"><span class="heading4" id="s2.2.2.1">Tìm kiếm văn bản</span></a>
+                                </li>
+                                <li class="heading4" id="i2.2.2.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.2.2.2" href="sa-van-bn-dn.html?v=4" target="hmcontent"><span class="heading4" id="s2.2.2.2">Sửa văn bản đến</span></a>
+                                </li>
+                                <li class="heading4" id="i2.2.2.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.2.2.3" href="xoa-van-bn-dn.html?v=4" target="hmcontent"><span class="heading4" id="s2.2.2.3">Xóa văn bản đến</span></a>
+                                </li>
+                                <li class="heading4" id="i2.2.2.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.2.2.4" href="in-s-van-bn3.html?v=4" target="hmcontent"><span class="heading4" id="s2.2.2.4">In sổ văn bản</span></a>
+                                </li>
+                                <li class="heading5" id="i2.2.2.5.1" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading5" id="a2.2.2.5.1" href="xem_tim-kim-van-bn-dn.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.2.5.1">Xem, tìm kiếm văn bản</span></a>
+                                </li>
+                                <li class="heading5" id="i2.2.2.5.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading5" id="a2.2.2.5.2" href="sa_-xoa-van-bn-dn21.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.2.5.2">Sửa, xóa văn bản đến</span></a>
+                                </li>
+                                <li class="heading5" id="i2.2.2.5.3" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading5" id="a2.2.2.5.3" href="in-van-bn-dn5.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.2.5.3">In văn bản đến</span></a>
+                                </li>
+
+                            </ul>-->
+                        </li>
+
+                        <li class="heading3" id="i2.2.3" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a2.2.3" href="x-ly-van-bn-dn.html?v=4" target="hmcontent"><span class="heading3" id="s2.2.3" ondblclick="return dblclicked(this)">3.3. Các chức năng hỗ trợ</span></a>
+                            <ul id="ul2.2.3" style="list-style-type:none">
+                                <li class="heading4" id="i2.2.3.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.2.3.1" href="cp-nht-y-kin-x-ly.html?v=4" target="hmcontent"><span class="heading4" id="s2.2.3.1" ondblclick="return dblclicked(this)">3.3.1.	Gộp văn bản</span></a>
+                                    <ul id="ul2.2.3.1" style="list-style-type:none">
+                                        <li class="heading5" id="i2.2.3.1.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                            <a class="heading5" id="a2.2.3.1.1" href="cp-nht-y-kin-x-ly2.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.3.1.1">Gộp văn bản</span></a>
+                                        </li>
+                                        <!--  <li class="heading5" id="i2.2.3.1.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                              <a class="heading5" id="a2.2.3.1.2" href="video-hung-dn19.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.3.1.2">Video hướng dẫn</span></a>
+                                          </li>-->
+                                    </ul>
+                                </li>
+                                <li class="heading4" id="i2.2.3.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.2.3.2" href="luan-chuyn-van-bn.html?v=4" target="hmcontent"><span class="heading4" id="s2.2.3.2" ondblclick="return dblclicked(this)">3.3.2. Tìm kiếm văn bản</span></a>
+                                    <ul id="ul2.2.3.2" style="list-style-type:none">
+                                        <li class="heading5" id="i2.2.3.2.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                            <a class="heading5" id="a2.2.3.2.1" href="luan-chuyn-van-bn2.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.3.2.1">Tìm kiếm văn bản</span></a>
+                                        </li>
+                                        <!-- <li class="heading5" id="i2.2.3.2.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.2.3.2.2" href="video-hung-dn20.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.3.2.2">Video hướng dẫn</span></a>
+                                         </li>-->
+                                    </ul>
+                                </li>
+                                <li class="heading4" id="i2.2.3.3" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.2.3.3" href="in-phiu-trinh.html?v=4" target="hmcontent"><span class="heading4" id="s2.2.3.3" ondblclick="return dblclicked(this)">3.3.3. Xem thông tin liên quan văn bản đến</span></a>
+                                    <ul id="ul2.2.3.3" style="list-style-type:none">
+                                        <li class="heading5" id="i2.2.3.3.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                            <a class="heading5" id="a2.2.3.3.1" href="in-phiu-trinh2.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.3.3.1">Xem thông tin liên quan văn bản đến</span></a>
+                                        </li>
+                                        <!-- <li class="heading5" id="i2.2.3.3.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.2.3.3.2" href="video-hung-dn21.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.3.3.2">Video hướng dẫn</span></a>
+                                         </li>-->
+                                    </ul>
+                                </li>
+                                <li class="heading4" id="i2.2.3.4" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.2.3.4" href="cp-nht-trng-thai-x-ly.html?v=4" target="hmcontent"><span class="heading4" id="s2.2.3.4" ondblclick="return dblclicked(this)">3.3.4. Cập nhật thông tin xử lý văn bản</span></a>
+                                    <ul id="ul2.2.3.4" style="list-style-type:none">
+                                        <li class="heading5" id="i2.2.3.4.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                            <a class="heading5" id="a2.2.3.4.1" href="cp-nht-trng-thai-x-ly2.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.3.4.1">Cập nhật thông tin xử lý văn bản</span></a>
+                                        </li>
+                                        <!--  <li class="heading5" id="i2.2.3.4.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                              <a class="heading5" id="a2.2.3.4.2" href="video-hung-dn22.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.3.4.2">Video hướng dẫn</span></a>
+                                          </li>-->
+                                    </ul>
+                                </li>
+                                <!--- <li class="heading4" id="i2.2.3.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a2.2.3.5" href="cp-nht-trng-thai-x-ly-C.html?v=4" target="hmcontent"><span class="heading4" id="s2.2.3.5" ondblclick="return dblclicked(this)">3.3.5.Cập nhật trạng thái người dùng</span></a>
+                                     <ul id="ul2.2.3.5" style="list-style-type:none">
+                                         <li class="heading5" id="i2.2.3.5.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.2.3.5.1" href="cp_nht_trng_thai_ngi_dung.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.3.5.1">Cập nhật trạng thái người dùng</span></a>
+                                         </li>
+                                         <li class="heading5" id="i2.2.3.5.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.2.3.5.2" href="video-hung-dn99.html?v=4" target="hmcontent"><span class="heading5" id="s2.2.3.5.2">Video hướng dẫn</span></a>
+                                         </li>
+                                     </ul>
+                                 </li>-->
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="heading2" id="i2.3" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a2.3" href="qun-ly-van-bn-di.html?v=4" target="hmcontent"><span class="heading2" id="s2.3" ondblclick="return dblclicked(this)">4. Quản lý văn bản đi</span></a>
+                    <ul id="ul2.3" style="list-style-type:none">
+                        <li class="heading3" id="i2.3.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a2.3.1" href="them-mi-van-bn-di.html?v=4" target="hmcontent"><span class="heading3" id="s2.3.1" ondblclick="return dblclicked(this)">4.1. Thêm mới văn bản đi</span></a>
+                            <ul id="ul2.3.1" style="list-style-type:none">
+                                <li class="heading4" id="i2.3.1.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.3.1.1" href="them-mi-van-bn-di2.html?v=4" target="hmcontent"><span class="heading4" id="s2.3.1.1">Thêm mới văn bản đi</span></a>
+                                </li>
+                                <!--   <li class="heading4" id="i2.3.1.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                       <a class="heading4" id="a2.3.1.2" href="video-hung-dn15.html?v=4" target="hmcontent"><span class="heading4" id="s2.3.1.2">Video hướng dẫn</span></a>
+                                   </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i2.3.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a2.3.2" href="xem_-sa_-xoa-van-bn-di.html?v=4" target="hmcontent"><span class="heading3" id="s2.3.2" ondblclick="return dblclicked(this)">4.2. Xem, sửa, xóa văn bản đi</span></a>
+                            <ul id="ul2.3.2" style="list-style-type:none">
+                                <li class="heading5" id="i2.3.2.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading5" id="a2.3.2.1" href="sa-van-bn2.html?v=4" target="hmcontent"><span class="heading5" id="s2.3.2.2.1">Xem, sửa, xóa văn bản đi</span></a>
+                                </li>
+                                <!-- <li class="heading5" id="i2.3.2.2.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading5" id="a2.3.2.2.2" href="video-hung-dn13.html?v=4" target="hmcontent"><span class="heading5" id="s2.3.2.2.2">Video hướng dẫn</span></a>
+                                </li>-->
+                            </ul>
+                            <!-- <ul id="ul2.3.2" style="list-style-type:none">
+                                 <li class="heading4" id="i2.3.2.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a2.3.2.1" href="tim-kim-van-bn.html?v=4" target="hmcontent"><span class="heading4" id="s2.3.2.1" ondblclick="return dblclicked(this)">4.2.1. Tìm kiếm văn bản</span></a>
+                                     <ul id="ul2.3.2.2" style="list-style-type:none">
+                                         <li class="heading5" id="i2.3.2.2.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.3.2.2.1" href="sa-van-bn2.html?v=4" target="hmcontent"><span class="heading5" id="s2.3.2.2.1">Sửa văn bản</span></a>
+                                         </li>
+                                         <li class="heading5" id="i2.3.2.2.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.3.2.2.2" href="video-hung-dn13.html?v=4" target="hmcontent"><span class="heading5" id="s2.3.2.2.2">Video hướng dẫn</span></a>
+                                         </li>
+                                     </ul>
+                                 </li>
+                                 <li class="heading4" id="i2.3.2.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a2.3.2.2" href="sa-van-bn.html?v=4" target="hmcontent"><span class="heading4" id="s2.3.2.2" ondblclick="return dblclicked(this)">4.2.2. Sửa văn bản</span></a>
+                                     <ul id="ul2.3.2.2" style="list-style-type:none">
+                                         <li class="heading5" id="i2.3.2.2.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.3.2.2.1" href="sa-van-bn2.html?v=4" target="hmcontent"><span class="heading5" id="s2.3.2.2.1">Sửa văn bản</span></a>
+                                         </li>
+                                         <li class="heading5" id="i2.3.2.2.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.3.2.2.2" href="video-hung-dn13.html?v=4" target="hmcontent"><span class="heading5" id="s2.3.2.2.2">Video hướng dẫn</span></a>
+                                         </li>
+                                     </ul>
+                                 </li>
+                                 <li class="heading4" id="i2.3.2.3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a2.3.2.3" href="xoa-van-bn.html?v=4" target="hmcontent"><span class="heading4" id="s2.3.2.3" ondblclick="return dblclicked(this)">4.2.3. Xóa văn bản</span></a>
+                                     <ul id="ul2.3.2.3" style="list-style-type:none">
+                                         <li class="heading5" id="i2.3.2.3.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.3.2.3.1" href="xoa-van-bn2.html?v=4" target="hmcontent"><span class="heading5" id="s2.3.2.3.1">Xóa văn bản</span></a>
+                                         </li>
+                                         <li class="heading5" id="i2.3.2.3.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.3.2.3.2" href="video-hung-dn12.html?v=4" target="hmcontent"><span class="heading5" id="s2.3.2.3.2">Video hướng dẫn</span></a>
+                                         </li>
+                                     </ul>
+                                 </li>
+                                 <li class="heading4" id="i2.3.2.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a2.3.2.4" href="in-s-van-bn.html?v=4" target="hmcontent"><span class="heading4" id="s2.3.2.4" ondblclick="return dblclicked(this)">4.2.4. In sổ văn bản</span></a>
+                                     <ul id="ul2.3.2.4" style="list-style-type:none">
+                                         <li class="heading5" id="i2.3.2.4.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.3.2.4.1" href="in-s-van-bn2.html?v=4" target="hmcontent"><span class="heading5" id="s2.3.2.4.1">In sổ văn bản</span></a>
+                                         </li>
+                                         <li class="heading5" id="i2.3.2.4.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                             <a class="heading5" id="a2.3.2.4.2" href="video-hung-dn11.html?v=4" target="hmcontent"><span class="heading5" id="s2.3.2.4.2">Video hướng dẫn</span></a>
+                                         </li>
+                                     </ul>
+                                 </li>
+                             </ul>-->
+                        </li>
+                        <!--<li class="heading3" id="i2.3.3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a2.3.3" href="phat-hanh-van-bn-d-tho.html?v=4" target="hmcontent"><span class="heading3" id="s2.3.3" ondblclick="return dblclicked(this)">4.3. Phát hành văn bản dự thảo</span></a>
+                            <ul id="ul2.3.3" style="list-style-type:none">
+                                <li class="heading4" id="i2.3.3.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.3.3.1" href="phat-hanh-van-bn-d-tho2.html?v=4" target="hmcontent"><span class="heading4" id="s2.3.3.1">Phát hành văn bản dự thảo</span></a>
+                                </li>
+                                <li class="heading4" id="i2.3.3.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.3.3.2" href="video-hung-dn10.html?v=4" target="hmcontent"><span class="heading4" id="s2.3.3.2">Video hướng dẫn</span></a>
+                                </li>
+                            </ul>
+                        </li>-->
+                    </ul>
+                </li>
+                <li class="heading2" id="i2.4" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a2.4" href="qun-ly-h-so.html?v=4" target="hmcontent"><span class="heading2" id="s2.4" ondblclick="return dblclicked(this)">5. Quản lý hồ sơ</span></a>
+                    <ul id="ul2.4" style="list-style-type:none">
+                        <li class="heading3" id="i2.4.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a2.4.1" href="them-mi-h-so.html?v=4" target="hmcontent"><span class="heading3" id="s2.4.1" ondblclick="return dblclicked(this)">5.1. Thêm mới hồ sơ</span></a>
+                            <ul id="ul2.4.1" style="list-style-type:none">
+                                <li class="heading4" id="i2.4.1.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.4.1.1" href="them-mi-h-so2.html?v=4" target="hmcontent"><span class="heading4" id="s2.4.1.1">Thêm mới hồ sơ</span></a>
+                                </li>
+                                <!-- <li class="heading4" id="i2.4.1.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a2.4.1.2" href="video-hung-dn7.html?v=4" target="hmcontent"><span class="heading4" id="s2.4.1.2">Video hướng dẫn</span></a>
+                                 </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i2.4.2" data-bg="../cicon1.png;../cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a2.4.2" href="xem_-sa-h-so.html?v=4" target="hmcontent"><span class="heading3" id="s2.4.2" ondblclick="return dblclicked(this)">5.2. Xem sửa xóa hồ sơ</span></a>
+                            <ul id="ul2.4.2" style="list-style-type:none">
+                                <li class="heading5" id="i2.4.2.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading5" id="a2.4.2.1" href="xem_-sa-h-so2.html?v=4" target="hmcontent"><span class="heading5" id="s2.4.2.1">Xem, sửa, xóa hồ sơ</span></a>
+                                </li>
+                                <!--  <li class="heading5" id="i2.4.2.1.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                      <a class="heading5" id="a2.4.2.1.2" href="video-hung-dn8.html?v=4" target="hmcontent"><span class="heading5" id="s2.4.2.1.2">Video hướng dẫn</span></a>
+                                  </li>-->
+                            </ul>
+                            <!--<ul id="ul2.4.2" style="list-style-type:none">
+                                <li class="heading4" id="i2.4.2.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.4.2.1" href="xem_-sa-h-so.html?v=4" target="hmcontent"><span class="heading4" id="s2.4.2.1" ondblclick="return dblclicked(this)">5.2.1. Xem, sửa hồ sơ</span></a>
+                                    <ul id="ul2.4.2.1" style="list-style-type:none">
+                                        <li class="heading5" id="i2.4.2.1.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                            <a class="heading5" id="a2.4.2.1.1" href="xem_-sa-h-so2.html?v=4" target="hmcontent"><span class="heading5" id="s2.4.2.1.1">Xem, sửa hồ sơ</span></a>
+                                        </li>
+                                        <li class="heading5" id="i2.4.2.1.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                            <a class="heading5" id="a2.4.2.1.2" href="video-hung-dn8.html?v=4" target="hmcontent"><span class="heading5" id="s2.4.2.1.2">Video hướng dẫn</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="heading4" id="i2.4.2.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a2.4.2.2" href="xoa-h-so.html?v=4" target="hmcontent"><span class="heading4" id="s2.4.2.2" ondblclick="return dblclicked(this)">5.2.2.Xóa hồ sơ</span></a>
+                                    <ul id="ul2.4.2.2" style="list-style-type:none">
+                                        <li class="heading5" id="i2.4.2.2.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                            <a class="heading5" id="a2.4.2.2.1" href="xoa-h-so2.html?v=4" target="hmcontent"><span class="heading5" id="s2.4.2.2.1">Xóa hồ sơ</span></a>
+                                        </li>
+                                        <li class="heading5" id="i2.4.2.2.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                            <a class="heading5" id="a2.4.2.2.2" href="video-hung-dn9.html?v=4" target="hmcontent"><span class="heading5" id="s2.4.2.2.2">Video hướng dẫn</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>-->
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="heading1" id="i3" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:8px" onclick="return clicked(this,event)">
+            <a class="heading1" id="a3" href="hung-dn-chuyen-vien.html?v=4" target="hmcontent"><span class="heading1" id="s3" ondblclick="return dblclicked(this)">III. Hướng dẫn Chuyên viên</span></a>
+            <ul id="ul3" style="list-style-type:none">
+                <li class="heading2" id="i3.4" data-bg="../img/cicon1.../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a3.4" href="tng-quan-hung-dn-chuyen-vien.html?v=4" target="hmcontent"><span class="heading2" id="s3.4" ondblclick="return dblclicked(this)">1. Tổng quan</span></a>
+                </li>
+                <li class="heading2" id="i3.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a3.1" href="van-bn-dn.html?v=4" target="hmcontent"><span class="heading2" id="s3.1" ondblclick="return dblclicked(this)">2. Văn bản đến</span></a>
+                    <ul id="ul3.1" style="list-style-type:none">
+                        <li class="heading3" id="i3.1.1" data-bg="../img/cicon1.png;../img/../cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a3.1.1" href="tim-kim_-xem-thong-tin-van-bn3.html?v=4" target="hmcontent"><span class="heading3" id="s3.1.1" ondblclick="return dblclicked(this)">2.1.Xem thông tin văn bản đến</span></a>
+                            <ul id="ul3.1.1" style="list-style-type:none">
+                                <li class="heading4" id="i3.1.1.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a3.1.1.1" href="tim-kim_-xem-thong-tin-van-bn4.html?v=4" target="hmcontent"><span class="heading4" id="s3.1.1.1">Xem thông tin văn bản đến</span></a>
+                                </li>
+                                <!-- <li class="heading4" id="i3.1.1.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a3.1.1.2" href="video-hung-dn39.html?v=4" target="hmcontent"><span class="heading4" id="s3.1.1.2">Video hướng dẫn</span></a>
+                                 </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i3.1.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a3.1.2" href="cp-nht-y-kin-x-ly-van-bn3.html?v=4" target="hmcontent"><span class="heading3" id="s3.1.2" ondblclick="return dblclicked(this)">2.2. Cập nhật ý kiến xử lý</span></a>
+                            <ul id="ul3.1.2" style="list-style-type:none">
+                                <li class="heading4" id="i3.1.2.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a3.1.2.1" href="cp-nht-y-kin-x-ly-van-bn4.html?v=4" target="hmcontent"><span class="heading4" id="s3.1.2.1">Cập nhật ý kiến xử lý</span></a>
+                                </li>
+                                <!-- <li class="heading4" id="i3.1.2.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a3.1.2.2" href="video-hung-dn38.html?v=4" target="hmcontent"><span class="heading4" id="s3.1.2.2">Video hướng dẫn</span></a>
+                                 </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i3.1.3" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a3.1.3" href="luan-chuyn-van-bn3.html?v=4" target="hmcontent"><span class="heading3" id="s3.1.3" ondblclick="return dblclicked(this)">2.3. Cập nhật trạng thái xử lý</span></a>
+                            <ul id="ul3.1.3" style="list-style-type:none">
+                                <li class="heading4" id="i3.1.3.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a3.1.3.1" href="luan-chuyn-van-bn4.html?v=4" target="hmcontent"><span class="heading4" id="s3.1.3.1">Cập nhật trạng thái xử lý</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i3.1.4" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a3.1.4" href="cp-nht-trng-thai3.html?v=4" target="hmcontent"><span class="heading3" id="s3.1.4" ondblclick="return dblclicked(this)">2.4. Các chức năng hỗ trợ</span></a>
+                            <ul id="ul3.1.4" style="list-style-type:none">
+                                <li class="heading4" id="i3.1.4.1" style="padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a3.1.4.1" href="cp-nht-trng-thai4.html?v=4" target="hmcontent"><span class="heading4" id="s3.1.4.1">2.4.1.	Tìm kiếm văn bản</span></a>
+                                </li>
+                                <li class="heading4" id="i3.1.4.2" style="padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a3.1.4.2" href="video-hung-dn34.html?v=4" target="hmcontent"><span class="heading4" id="s3.1.4.2">2.4.2. Xem thông tin liên quan văn bản đến</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="heading2" id="i3.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a3.2" href="van-bn-d-tho.html?v=4" target="hmcontent"><span class="heading2" id="s3.2" ondblclick="return dblclicked(this)">3. Văn bản dự thảo</span></a>
+                    <ul id="ul3.2" style="list-style-type:none">
+                        <li class="heading3" id="i3.2.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a3.2.1" href="them-mi-van-bn-d-tho.html?v=4" target="hmcontent"><span class="heading3" id="s3.2.1" ondblclick="return dblclicked(this)">3.1. Thêm mới</span></a>
+                            <ul id="ul3.2.1" style="list-style-type:none">
+                                <li class="heading4" id="i3.2.1.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a3.2.1.1" href="them-mi-van-bn-d-tho2.html?v=4" target="hmcontent"><span class="heading4" id="s3.2.1.1">Thêm mới</span></a>
+                                </li>
+                                <!--   <li class="heading4" id="i3.2.1.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                       <a class="heading4" id="a3.2.1.2" href="video-hung-dn36.html?v=4" target="hmcontent"><span class="heading4" id="s3.2.1.2">Video hướng dẫn</span></a>
+                                   </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i3.2.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a3.2.2" href="tim-kim_-xem_-cp-nht-van-bn-d-.html?v=4" target="hmcontent"><span class="heading3" id="s3.2.2" ondblclick="return dblclicked(this)">3.2. Xem, sửa, xóa văn bản dự thảo</span></a>
+                            <ul id="ul3.2.2" style="list-style-type:none">
+                                <li class="heading4" id="i3.2.2.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a3.2.2.1" href="xem-va-tim-kim-van-bn-d-tho.html?v=4" target="hmcontent"><span class="heading4" id="s3.2.2.1">Xem, sửa, xóa văn bản dự thảo</span></a>
+                                </li>
+                                <!-- <li class="heading4" id="i3.2.2.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a3.2.2.2" href="sa-van-bn-d-tho-mi-to.html?v=4" target="hmcontent"><span class="heading4" id="s3.2.2.2">Sửa văn bản dự thảo mới tạo</span></a>
+                                 </li>
+                                 <li class="heading4" id="i3.2.2.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a3.2.2.3" href="xoa-van-bn-d-tho.html?v=4" target="hmcontent"><span class="heading4" id="s3.2.2.3">Xóa văn bản dự thảo</span></a>
+                                 </li>
+                                 <li class="heading4" id="i3.2.2.4" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a3.2.2.4" href="video-hung-dn35.html?v=4" target="hmcontent"><span class="heading4" id="s3.2.2.4">Video hướng dẫn</span></a>
+                                 </li>-->
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="heading2" id="i3.3" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a3.3" href="qun-ly-h-so-chuyen-vien.html?v=4" target="hmcontent"><span class="heading2" id="s3.3" ondblclick="return dblclicked(this)">4. Quản lý hồ sơ</span></a>
+                    <ul id="ul3.3" style="list-style-type:none">
+                        <li class="heading3" id="i3.3.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a3.3.1" href="them-mi-h-so-12.html?v=4" target="hmcontent"><span class="heading3" id="s3.3.1" ondblclick="return dblclicked(this)">4.1. Thêm mới hồ sơ</span></a>
+                            <ul id="ul3.3.1" style="list-style-type:none">
+                                <li class="heading4" id="i3.3.1.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a3.3.1.1" href="them-mi-h-so13.html?v=4" target="hmcontent"><span class="heading4" id="s3.3.1.1">Thêm mới hồ sơ</span></a>
+                                </li>
+                                <!--  <li class="heading4" id="i3.3.1.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                      <a class="heading4" id="a3.3.1.2" href="video-hung-dn60.html?v=4" target="hmcontent"><span class="heading4" id="s3.3.1.2">Video hướng dẫn</span></a>
+                                  </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i3.3.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a3.3.2" href="xem-sa-xoa-h-so12.html?v=4" target="hmcontent"><span class="heading3" id="s3.3.2" ondblclick="return dblclicked(this)">4.2. Xem sửa xóa hồ sơ</span></a>
+                            <ul id="ul3.3.2" style="list-style-type:none">
+                                <li class="heading5" id="i3.3.2.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading5" id="a3.3.2.1" href="xem-sa-xoa-h-so13.html?v=4" target="hmcontent"><span class="heading5" id="s3.3.2.1">Xem, sửa, xóa hồ sơ</span></a>
+                                </li>
+                                <!-- <li class="heading5" id="i3.3.2.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading5" id="a3.3.2.2" href="video-hung-dn61.html?v=4" target="hmcontent"><span class="heading5" id="s3.3.2.2">Video hướng dẫn</span></a>
+                                 </li>-->
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="heading1" id="i4" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:8px" onclick="return clicked(this,event)">
+            <a class="heading1" id="a4" href="hung-dn-lanh-do-don-v_phong-ba.html?v=4" target="hmcontent"><span class="heading1" id="s4" ondblclick="return dblclicked(this)">IV. Hướng dẫn Lãnh đạo đơn vị/phòng ban</span></a>
+            <ul id="ul4" style="list-style-type:none">
+                <li class="heading2" id="i4.6" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a4.6" href="tng-quan-hung-dn-lanh-do-dv_pb.html?v=4" target="hmcontent"><span class="heading2" id="s4.6" ondblclick="return dblclicked(this)">1. Tổng quan</span></a>
+                </li>
+                <li class="heading2" id="i4.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a4.1" href="van-bn-dn2.html?v=4" target="hmcontent"><span class="heading2" id="s4.1" ondblclick="return dblclicked(this)">2. Văn bản đến</span></a>
+                    <ul id="ul4.1" style="list-style-type:none">
+                        <li class="heading3" id="i4.1.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a4.1.1" href="tim-kim_-xem-thong-tin-van-bn-.html?v=4" target="hmcontent"><span class="heading3" id="s4.1.1" ondblclick="return dblclicked(this)">2.1. Xem thông tin văn bản đến&nbsp;</span></a>
+                            <ul id="ul4.1.1" style="list-style-type:none">
+                                <li class="heading4" id="i4.1.1.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a4.1.1.1" href="tim-kim_-xem-thong-tin-van-bn2.html?v=4" target="hmcontent"><span class="heading4" id="s4.1.1.1">Xem thông tin văn bản đến</span></a>
+                                </li>
+                                <!--  <li class="heading4" id="i4.1.1.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                      <a class="heading4" id="a4.1.1.2" href="video-hung-dn33.html?v=4" target="hmcontent"><span class="heading4" id="s4.1.1.2">Video hướng dẫn</span></a>
+                                  </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i4.1.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a4.1.2" href="cp-nht-y-kin-x-ly-van-bn.html?v=4" target="hmcontent"><span class="heading3" id="s4.1.2" ondblclick="return dblclicked(this)">2.2. Đưa ý kiến xử lý</span></a>
+                            <ul id="ul4.1.2" style="list-style-type:none">
+                                <li class="heading4" id="i4.1.2.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a4.1.2.1" href="cp-nht-y-kin-x-ly-van-bn2.html?v=4" target="hmcontent"><span class="heading4" id="s4.1.2.1">Đưa ý kiến xử lý</span></a>
+                                </li>
+                                <!-- <li class="heading4" id="i4.1.2.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a4.1.2.2" href="video-hung-dn32.html?v=4" target="hmcontent"><span class="heading4" id="s4.1.2.2">Video hướng dẫn</span></a>
+                                 </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i4.1.3" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a4.1.3" href="luan-chuyn-van-bn-.html?v=4" target="hmcontent"><span class="heading3" id="s4.1.3" ondblclick="return dblclicked(this)">2.3. Cập nhật trạng thái xử lý&nbsp;</span></a>
+                            <ul id="ul4.1.3" style="list-style-type:none">
+                                <li class="heading4" id="i4.1.3.1" style="background:url(../../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a4.1.3.1" href="luan-chuyn-van-bn-2.html?v=4" target="hmcontent"><span class="heading4" id="s4.1.3.1">Cập nhật trạng thái xử lý&nbsp;</span></a>
+                                </li>
+                                <!-- <li class="heading4" id="i4.1.3.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a4.1.3.2" href="video-hung-dn31.html?v=4" target="hmcontent"><span class="heading4" id="s4.1.3.2">Video hướng dẫn</span></a>
+                                 </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i4.1.4" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a4.1.4" href="cp-nht-trng-thai.html?v=4" target="hmcontent"><span class="heading3" id="s4.1.4" ondblclick="return dblclicked(this)">2.4. Đổi hạn và loại văn bản</span></a>
+                            <ul id="ul4.1.4" style="list-style-type:none">
+                                <li class="heading4" id="i4.1.4.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a4.1.4.1" href="cp-nht-trng-thai2.html?v=4" target="hmcontent"><span class="heading4" id="s4.1.4.1">Đổi hạn và loại văn bản</span></a>
+                                </li>
+                                <!--   <li class="heading4" id="i4.1.4.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                       <a class="heading4" id="a4.1.4.2" href="video-hung-dn30.html?v=4" target="hmcontent"><span class="heading4" id="s4.1.4.2">Video hướng dẫn</span></a>
+                                   </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i4.1.6" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a4.1.6" href="cp-nht-trng-thai8.html?v=4" target="hmcontent"><span class="heading3" id="s4.1.6" ondblclick="return dblclicked(this)">2.5. Các chức năng hỗ trợ</span></a>
+                            <ul id="ul4.1.6" style="list-style-type:none">
+                                <li class="heading4" id="i4.1.6.1" style="padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a4.1.6.1" href="cp-nht-trng-thai7.html?v=4" target="hmcontent"><span class="heading4" id="s4.1.6.1">2.5.1. Tìm kiếm văn bản</span></a>
+                                </li>../"return clicked(this,event)">
+                                    <a class="heading4" id="a4.1.6.2" href="video-hung-dn30.html?v=4" target="hmcontent"><span class="heading4" id="s4.1.6.2">2.5.2. Xem thông tin liên quan văn bản đến</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                      <!--  <li class="heading3" id="i4.1.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a4.1.5" href="theo-doi-trng-thai-x-ly-van-bn.html?v=4" target="hmcontent"><span class="heading3" id="s4.1.5" ondblclick="return dblclicked(this)">2.6. Theo dõi trạng thái xử lý</span></a>
+                            <ul id="ul4.1.5" style="list-style-type:none">
+                                <li class="heading4" id="i4.1.5.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a4.1.5.1" href="theo-doi-trng-thai-x-ly-van-b2.html?v=4" target="hmcontent"><span class="heading4" id="s4.1.5.1">Theo dõi trạng thái xử lý</span></a>
+                                </li>
+                                <li class="heading4" id="i4.1.5.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a4.1.5.2" href="video-hung-dn29.html?v=4" target="hmcontent"><span class="heading4" id="s4.1.5.2">Video hướng dẫn</span></a>
+                                </li>
+                            </ul>
+                        </li>-->
+                    </ul>
+                </li>
+                <li class="heading2" id="i4.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a4.2" href="van-bn-di.html?v=4" target="hmcontent"><span class="heading2" id="s4.2" ondblclick="return dblclicked(this)">3. Văn bản đi</span></a>
+                    <ul id="ul4.2" style="list-style-type:none">
+                        <li class="heading3" id="i4.2.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a4.2.1" href="van-bn-di2.html?v=4" target="hmcontent"><span class="heading3" id="s4.2.1">Văn bản đi</span></a>
+                        </li>
+                        <!-- <li class="heading3" id="i4.2.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                             <a class="heading3" id="a4.2.2" href="video-hung-dn26.html?v=4" target="hmcontent"><span class="heading3" id="s4.2.2">Video hướng dẫn</span></a>
+                         </li>-->
+                    </ul>
+                </li>
+                <li class="heading2" id="i4.3" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a4.3" href="van-bn-d-tho2.html?v=4" target="hmcontent"><span class="heading2" id="s4.3" ondblclick="return dblclicked(this)">4. Văn bản dự thảo</span></a>
+                    <ul id="ul4.3" style="list-style-type:none">
+                        <li class="heading3" id="i4.3.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a4.3.1" href="xem-danh-sach-van-bn-d-tho.html?v=4" target="hmcontent"><span class="heading3" id="s4.3.1" ondblclick="return dblclicked(this)">4.1. Xem danh sách văn bản dự thảo</span></a>
+                            <ul id="ul4.3.1" style="list-style-type:none">
+                                <li class="heading4" id="i4.3.1.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a4.3.1.1" href="xem-danh-sach-van-bn-d-tho2.html?v=4" target="hmcontent"><span class="heading4" id="s4.3.1.1">Xem danh sách</span></a>
+                                </li>
+                                <!-- <li class="heading4" id="i4.3.1.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a4.3.1.2" href="video-hung-dn27.html?v=4" target="hmcontent"><span class="heading4" id="s4.3.1.2">Video hướng dẫn</span></a>
+                                 </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i4.3.2" data-bg="../cicon1.png;../cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a4.3.2" href="x-ly-van-bn-d-tho.html?v=4" target="hmcontent"><span class="heading3" id="s4.3.2" ondblclick="return dblclicked(this)">4.2. Xử lý văn bản dự thảo</span></a>
+                            <ul id="ul4.3.2" style="list-style-type:none">
+                                <li class="heading4" id="i4.3.2.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a4.3.2.1" href="dua-y-kin-.html?v=4" target="hmcontent"><span class="heading4" id="s4.3.2.1">Xử lý văn bản dự thảo&nbsp;</span></a>
+                                </li>
+                                <!-- <li class="heading4" id="i4.3.2.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a4.3.2.2" href="duyt-van-bn.html?v=4" target="hmcontent"><span class="heading4" id="s4.3.2.2">Duyệt văn bản</span></a>
+                                 </li>
+                                 <li class="heading4" id="i4.3.2.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a4.3.2.3" href="duyt-th-thc.html?v=4" target="hmcontent"><span class="heading4" id="s4.3.2.3">Duyệt thể thức</span></a>
+                                 </li>
+                                 <li class="heading4" id="i4.3.2.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a4.3.2.4" href="chuyn-phat-nhanh.html?v=4" target="hmcontent"><span class="heading4" id="s4.3.2.4">Chuyển phát hành</span></a>
+                                 </li>
+                                 <li class="heading4" id="i4.3.2.5" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading4" id="a4.3.2.5" href="video-hung-dn28.html?v=4" target="hmcontent"><span class="heading4" id="s4.3.2.5">Video hướng dẫn</span></a>
+                                 </li>-->
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="heading2" id="i4.5" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                    <a class="heading2" id="a4.5" href="qun-ly-h-so-lanh-do.html?v=4" target="hmcontent"><span class="heading2" id="s4.5" ondblclick="return dblclicked(this)">5. Quản lý hồ sơ</span></a>
+                    <ul id="ul4.5" style="list-style-type:none">
+                        <li class="heading3" id="i4.5.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a4.5.1" href="them-mi-h-so22.html?v=4" target="hmcontent"><span class="heading3" id="s4.5.1" ondblclick="return dblclicked(this)">5.1. Thêm mới hồ sơ</span></a>
+                            <ul id="ul4.5.1" style="list-style-type:none">
+                                <li class="heading4" id="i4.5.1.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading4" id="a4.5.1.1" href="them-mi-h-so23.html?v=4" target="hmcontent"><span class="heading4" id="s4.5.1.1">Thêm mới hồ sơ</span></a>
+                                </li>
+                                <!--  <li class="heading4" id="i4.5.1.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                      <a class="heading4" id="a4.5.1.2" href="video-hung-dn62.html?v=4" target="hmcontent"><span class="heading4" id="s4.5.1.2">Video hướng dẫn</span></a>
+                                  </li>-->
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i4.5.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)">
+                            <a class="heading3" id="a4.5.2" href="xem-sa-xoa-h-so22.html?v=4" target="hmcontent"><span class="heading3" id="s4.5.2" ondblclick="return dblclicked(this)">5.2. Xem sửa xóa hồ sơ</span></a>
+                            <ul id="ul4.5.2" style="list-style-type:none">
+                                <li class="heading5" id="i4.5.2.1" style="background:url(../img/cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                    <a class="heading5" id="a4.5.2.1" href="xem-sa-xoa-h-so23.html?v=4" target="hmcontent"><span class="heading5" id="s4.5.2.1">Xem, sửa, xóa hồ sơ</span></a>
+                                </li>
+                                <!-- <li class="heading5" id="i4.5.2.2" style="background:url(cicon33.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)">
+                                     <a class="heading5" id="a4.5.2.2" href="video-hung-dn63.html?v=4" target="hmcontent"><span class="heading5" id="s4.5.2.2">Video hướng dẫn</span></a>
+                                 </li>-->
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="heading1" id="i5" data-bg="../img/cicon1.png;../img/cicon2.png" style="background:url(../img/cicon2.png) no-repeat;cursor:pointer;padding-left:8px" onclick="return clicked(this,event)">
+            <a class="heading1" id="a5" href="hng_dn_lch_lanh_o.html" target="hmcontent"><span class="heading1" id="s5" ondblclick="return dblclicked(this)">V. Các tiện ích khác</span></a>
+            <ul id="ul5" style="list-style-type:none">
+                <li class="heading2" id="i5.4" data-bg="../img/cicon1.png;../img/cicon2.png" style="background: url(../img/cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                    <a class="heading2" id="a5.4" href="bao-cao-thng-ke.html?v=4" target="hmcontent"><span class="heading2" id="s5.4" ondblclick="return dblclicked(this)">1. Báo cáo thống kê</span></a>
+                    <ul id="ul5.4" style="list-style-type: none">
+                        <li class="heading3" id="i5.4.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background: url(../img/cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                            <a class="heading3" id="a5.4.1" href="van-bn-dn3.html?v=4" target="hmcontent"><span class="heading3" id="s5.4.1" ondblclick="return dblclicked(this)">1.1. Văn bản đến</span></a>
+                            <ul id="ul5.4.1" style="list-style-type: none">
+                                <li class="heading4" id="i5.4.1.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background: url(../img/cicon9.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                                    <a class="heading4" id="a5.4.1.1" href="bao-cao-tinh-hinh-gii-quyt-van.html?v=4" target="hmcontent"><span class="heading4" id="s5.4.1.1" ondblclick="return dblclicked(this)">Văn bản đến</span></a>
+                                    <!--  <ul id="ul5.4.1.1" style="list-style-type: none">
+                                          <li class="heading5" id="i5.4.1.1.1" data-bg="cicon1.png;cicon2.png" style="background: url(cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                                              <a class="heading5" id="a5.4.1.1.1" href="xem-bao-cao-bao-cao-tinh-hinh-.html?v=4" target="hmcontent"><span class="heading5" id="s5.4.1.1.1" ondblclick="return dblclicked(this)">1.1.1.1. Xem báo cáo báo cáo tình hình văn bản đến</span></a>
+                                              <ul id="ul5.4.1.1.1" style="list-style-type: none">
+                                                  <li class="heading6" id="i5.4.1.1.1.1" style="background: url(cicon9.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                                                      <a class="heading6" id="a5.4.1.1.1.1" href="xem-bao-cao-bao-cao-tinh-hinh2.html?v=4" target="hmcontent"><span class="heading6" id="s5.4.1.1.1.1">Xem báo cáo báo cáo tình hình văn bản đến</span></a>
+                                                  </li>
+                                                  <li class="heading6" id="i5.4.1.1.1.2" style="background: url(cicon33.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                                                      <a class="heading6" id="a5.4.1.1.1.2" href="video-hung-dn25.html?v=4" target="hmcontent"><span class="heading6" id="s5.4.1.1.1.2">Video hướng dẫn</span></a>
+                                                  </li>
+                                              </ul>
+                                          </li>
+                                          <li class="heading5" id="i5.4.1.1.2" data-bg="cicon1.png;cicon2.png" style="background: url(cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                                              <a class="heading5" id="a5.4.1.1.2" href="tim-kim-trong-danh-sach.html?v=4" target="hmcontent"><span class="heading5" id="s5.4.1.1.2" ondblclick="return dblclicked(this)">1.1.1.2. Tìm kiếm trong danh sách</span></a>
+                                              <ul id="ul5.4.1.1.2" style="list-style-type: none">
+                                                  <li class="heading6" id="i5.4.1.1.2.1" style="background: url(cicon9.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                                                      <a class="heading6" id="a5.4.1.1.2.1" href="tim-kim-trong-danh-sach2.html?v=4" target="hmcontent"><span class="heading6" id="s5.4.1.1.2.1">Tìm kiếm trong danh sách</span></a>
+                                                  </li>
+                                                  <li class="heading6" id="i5.4.1.1.2.2" style="background: url(cicon33.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                                                      <a class="heading6" id="a5.4.1.1.2.2" href="video-hung-dn24.html?v=4" target="hmcontent"><span class="heading6" id="s5.4.1.1.2.2">Video hướng dẫn</span></a>
+                                                  </li>
+                                              </ul>
+                                          </li>
+                                          <li class="heading5" id="i5.4.1.1.3" data-bg="cicon1.png;cicon2.png" style="background: url(cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                                              <a class="heading5" id="a5.4.1.1.3" href="xut_-in-bao-cao.html?v=4" target="hmcontent"><span class="heading5" id="s5.4.1.1.3" ondblclick="return dblclicked(this)">1.1.1.3. Xuất/ in báo cáo</span></a>
+                                              <ul id="ul5.4.1.1.3" style="list-style-type: none">
+                                                  <li class="heading6" id="i5.4.1.1.3.1" style="background: url(cicon9.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                                                      <a class="heading6" id="a5.4.1.1.3.1" href="xut_-in-bao-cao2.html?v=4" target="hmcontent"><span class="heading6" id="s5.4.1.1.3.1">Xuất/ in báo cáo</span></a>
+                                                  </li>
+                                                  <li class="heading6" id="i5.4.1.1.3.2" style="background: url(cicon33.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                                                      <a class="heading6" id="a5.4.1.1.3.2" href="video-hung-dn23.html?v=4" target="hmcontent"><span class="heading6" id="s5.4.1.1.3.2">Video hướng dẫn</span></a>
+                                                  </li>
+                                              </ul>
+                                          </li>
+                                      </ul>-->
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="heading3" id="i5.4.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background: url(../img/cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                            <a class="heading3" id="a5.4.2" href="van-bn-di3.html?v=4" target="hmcontent"><span class="heading3" id="s5.4.2" ondblclick="return dblclicked(this)">1.2. Văn bản đi</span></a>
+                            <ul id="ul5.4.2" style="list-style-type: none">
+                                <li class="heading4" id="i5.4.2.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background: url(../img/cicon9.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                                    <a class="heading4" id="a5.4.2.1" href="thng-ke-van-bn-di.html?v=4" target="hmcontent"><span class="heading4" id="s5.4.2.1" ondblclick="return dblclicked(this)">Văn bản đi</sp../img/an></a>
+                                    <!--<ul id="ul5.4.2.1" style="list-style-type: none">
+                                        <li class="heading5" id="i5.4.2.1.1" data-bg="cicon1.png;cicon2.png" style="background: url(cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                                            <a class="heading5" id="a5.4.2.1.1" href="xem-bao-cao-thng-ke-van-bn.html?v=4" target="hmcontent"><span class="heading5" id="s5.4.2.1.1" ondblclick="return dblclicked(this)">1.2.1.1. Xem báo cáo thống kê văn bản</span></a>
+                                            <ul id="ul5.4.2.1.1" style="list-style-type: none">
+                                                <li class="heading6" id="i5.4.2.1.1.1" style="background: url(cicon9.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                                                    <a class="heading6" id="a5.4.2.1.1.1" href="xem-bao-cao-thng-ke-van-bn2.html?v=4" target="hmcontent"><span class="heading6" id="s5.4.2.1.1.1">Xem báo cáo thống kê văn bản</span></a>
+                                                </li>
+                                                <li class="heading6" id="i5.4.2.1.1.2" style="background: url(cicon33.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                                                    <a class="heading6" id="a5.4.2.1.1.2" href="video-hung-dn43.html?v=4" target="hmcontent"><span class="heading6" id="s5.4.2.1.1.2">Video hướng dẫn</span></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="heading5" id="i5.4.2.1.2" data-bg="cicon1.png;cicon2.png" style="background: url(cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                                            <a class="heading5" id="a5.4.2.1.2" href="tim-kim-trong-danh-sach3.html?v=4" target="hmcontent"><span class="heading5" id="s5.4.2.1.2" ondblclick="return dblclicked(this)">1.2.1.2. Tìm kiếm trong danh sách</span></a>
+                                            <ul id="ul5.4.2.1.2" style="list-style-type: none">
+                                                <li class="heading6" id="i5.4.2.1.2.1" style="background: url(cicon9.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                                                    <a class="heading6" id="a5.4.2.1.2.1" href="tim-4.html?v=4" target="hmcontent"><span class="heading6" id="s5.4.2.1.2.1">Tìm kiếm trong danh sách</span></a>
+                                                </li>
+                                                <li class="heading6" id="i5.4.2.1.2.2" style="background: url(cicon33.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                                                    <a class="heading6" id="a5.4.2.1.2.2" href="video-hung-dn44.html?v=4" target="hmcontent"><span class="heading6" id="s5.4.2.1.2.2">Video hướng dẫn</span></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="heading5" id="i5.4.2.1.3" data-bg="cicon1.png;cicon2.png" style="background: url(cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                                            <a class="heading5" id="a5.4.2.1.3" href="xut_in-bao-cao.html?v=4" target="hmcontent"><span class="heading5" id="s5.4.2.1.3" ondblclick="return dblclicked(this)">1.2.1.3. Xuất/in báo cáo</span></a>
+                                            <ul id="ul5.4.2.1.3" style="list-style-type: none">
+                                                <li class="heading6" id="i5.4.2.1.3.1" style="background: url(cicon9.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                                                    <a class="heading6" id="a5.4.2.1.3.1" href="xut_in-bao-cao2.html?v=4" target="hmcontent"><span class="heading6" id="s5.4.2.1.3.1">Xuất/in báo cáo</span></a>
+                                                </li>
+                                                <li class="heading6" id="i5.4.2.1.3.2" style="background: url(cicon33.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                                                    <a class="heading6" id="a5.4.2.1.3.2" href="video-hung-dn45.html?v=4" target="hmcontent"><span class="heading6" id="s5.4.2.1.3.2">Video hướng dẫn</span></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>-->
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="heading2" id="i5.1" data-bg="../img/cicon1.png;../img/cicon2.png" style="background: url(../img/cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                    <a class="heading2" id="a5.1" href="XinChenSo.html" target="hmcontent"><span class="heading2" id="s5.1" ondblclick="return dblclicked(this)">2. Chèn - Xin số văn bản</span></a>
+                </li>
+                <li class="heading2" id="i5.2" data-bg="../img/cicon1.png;../img/cicon2.png" style="background: url(../img/cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                    <a class="heading2" id="a5.2" href="YKienXuLyVanBan.html" target="hmcontent"><span class="heading2" id="s5.2" ondblclick="return dblclicked(this)">3. Ý kiến xử lý văn bản</span></a>
+                    <ul id="ul5.2" style="list-style-type: none">
+                        <li class="heading6" id="i5.2.1" style="background: url(../img/cicon9.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                            <a class="heading6" id="a5.2.1" href="YKienXuLyVanBan2.html?v=4" target="hmcontent"><span class="heading6" id="s5.2.1">Ý kiến xử lý văn bản</span></a>
+                        </li>
+                        <!-- <li class="heading6" id="i5.2.2" style="background: url(cicon9.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                             <a class="heading6" id="a5.2.2" href="YKienXuLyVanBan3.html?v=4" target="hmcontent"><span class="heading6" id="s5.2.2">Thư ký BLĐ</span></a>
+                         </li>
+                         <li class="heading6" id="i5.2.3" style="background: url(cicon9.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                             <a class="heading6" id="a5.2.3" href="YKienXuLyVanBan4.html?v=4" target="hmcontent"><span class="heading6" id="s5.2.3">Lãnh đạo bộ</span></a>
+                         </li>-->
+                    </ul>
+                </li>
+              <li class="heading2" id="i5.5" data-bg="../img/cicon1.png;../img/cicon2.png" style="background: url(../img/cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                    <a class="heading2" id="a5.5" href="QLLichLamViec.html" target="hmcontent"><span class="heading2" id="s5.5" ondblclick="return dblclicked(this)">4. Quản lý lịch làm việc</span></a>
+                    <ul id="ul5.5" style="list-style-type: none">
+                        <li class="heading6" id="i5.5.1" style="background: url(../img/cicon2.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                            <a class="heading6" id="a5.5.1" href="xem-lich-cong-tac.html?v=4" target="hmcontent"><span class="heading6" id="s5.5.1">4.1. Xem lịch công tác</span></a>
+                        </li>
+                        <li class="heading6" id="i5.5.2" style="background: url(../img/cicon2.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                            <a class="heading6" id="a5.5.2" href="them-moi-lich-cong-tac.html?v=4" target="hmcontent"><span class="heading6" id="s5.5.2">4.2. Thêm mới lịch công tác</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <!--<li class="heading2" id="i5.5" data-bg="cicon1.png;cicon2.png" style="background: url(cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                    <a class="heading2" id="a5.5" href="QuanLyPhongHop.html" target="hmcontent"><span class="heading2" id="s5.5" ondblclick="return dblclicked(this)">4. Quản lý phòng họp</span></a>
+                    <ul id="ul5.5" style="list-style-type: none">
+                        <li class="heading6" id="i5.5.1" style="background: url(cicon9.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                            <a class="heading6" id="a5.5.1" href="QLPhongHop.html?v=4" target="hmcontent"><span class="heading6" id="s5.5.1">Phòng họp</span></a>
+                        </li>
+                        <li class="heading6" id="i5.5.2" style="background: url(cicon9.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                            <a class="heading6" id="a5.5.2" href="QLThongTinDatPhong.html?v=4" target="hmcontent"><span class="heading6" id="s5.5.2">Thông tin đặt phòng</span></a>
+                        </li>
+                    </ul>
+                </li>-->
+                <li class="heading2" id="i5.6" data-bg="../img/cicon1.png;../img/cicon2.png" style="background: url(../img/cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                    <a class="heading2" id="a5.6" href="QuanLyPhongHop.html" target="hmcontent"><span class="heading2" id="s5.6" ondblclick="return dblclicked(this)">5. Quản lý phòng họp</span></a>
+                    <ul id="ul5.6" style="list-style-type: none">
+                        <li class="heading6" id="i5.6.1" style="background: url(../img/cicon2.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                            <a class="heading6" id="a5.6.1" href="QLPhongHop.html?v=4" target="hmcontent"><span class="heading6" id="s5.6.1">5.1. Phòng họp</span></a>
+                        </li>
+                        <li class="heading6" id="i5.6.2" style="background: url(../img/cicon2.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                            <a class="heading6" id="a5.6.2" href="QLThongTinDatPhong.html?v=4" target="hmcontent"><span class="heading6" id="s5.6.2">5.2. Thông tin đặt phòng</span></a>
+                        </li>
+                    </ul>
+                </li>
+              <li class="heading2" id="i5.7" data-bg="../img/cicon1.png;../img/cicon2.png" style="background: url(../img/cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                    <a class="heading2" id="a5.7" href="QuanLyDatXe.html" target="hmcontent"><span class="heading2" id="s5.7" ondblclick="return dblclicked(this)">6. Quản lý đặt xe</span></a>
+                    <ul id="ul5.7" style="list-style-type: none">
+                        <li class="heading6" id="i5.7.1" style="background: url(../img/cicon2.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                            <a class="heading6" id="a5.7.1" href="DangKyDatXe.html?v=4" target="hmcontent"><span class="heading6" id="s5.7.1">6.1. Danh sách xe</span></a>
+                        </li>
+                        <li class="heading6" id="i5.7.2" style="background: url(../img/cicon2.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                            <a class="heading6" id="a5.7.2" href="DuyetDangKyDatXe.html?v=4" target="hmcontent"><span class="heading6" id="s5.7.2">6.2. Thông tin đặt xe</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="heading2" id="i5.8" data-bg="../img/cicon1.png;../img/cicon2.png" style="background: url(../img/cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                    <a class="heading2" id="a5.8" href="QuanLyCauHoiThuongGap.html" target="hmcontent"><span class="heading2" id="s5.8" ondblclick="return dblclicked(this)">7. Quản lý câu hỏi thường gặp</span></a>
+                    <ul id="ul5.8" style="list-style-type: none">
+                        <li class="heading6" id="i5.8.1" style="background: url(../img/cicon2.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                            <a class="heading6" id="a5.8.1" href="QuanLyCauHoi.html?v=4" target="hmcontent"><span class="heading6" id="s5.8.1">7.1. Quản lý câu hỏi</span></a>
+                        </li>
+                        <li class="heading6" id="i5.8.2" style="background: url(../img/cicon2.png) no-repeat; padding-left: 20px" onclick="return clicked(this, event)">
+                            <a class="heading6" id="a5.8.2" href="XemCauHoi.html?v=4" target="hmcontent"><span class="heading6" id="s5.8.2">7.2. Xem câu hỏi thường gặp</span></a>
+                        </li>
+                    </ul>
+                </li>
+               <!-- <li class="heading2" id="i5.3" data-bg="cicon1.png;cicon2.png" style="background: url(cicon2.png) no-repeat; cursor: pointer; padding-left: 20px" onclick="return clicked(this, event)">
+                    <a class="heading2" id="a5.3" href="/Publishing_Resources/HDSD/LichLanhDao/index.html" target="_parent"><span class="heading2" id="s5.3" ondblclick="return dblclicked(this)">6. Hướng dẫn Lịch lãnh đạo</span></a>
+                </li>-->
+            </ul>
+        </li>
+    </ul>
+    <!--<script type="text/javascript">loadicons('cicon2.png', 'cicon1.png', 'cicon9.png', 'cicon33.png');</script>-->
+</body>
+</html>

@@ -1,0 +1,156 @@
+@font-face {
+	font-family: 'VNF-gothambook';
+	src: url('../fonts/vnf_gothambook/VNF-gothambook.eot');
+	src: local('GothamBook'), url('../fonts/vnf_gothambook/VNF-gothambook.woff') format('woff'), 
+            url('../fonts/vnf_gothambook/VNF-gothambook.ttf') format('truetype');
+}
+.divPopup_wrapper {
+     border: 1px solid #3b4046;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.barpopup {
+    background-color: #1b3661;
+    overflow: hidden;
+    border-bottom: 1px solid #3B4046;
+} 
+
+.titlepopup { 
+    color: #FFFFFF;
+    /*font-family: 'VNF-gothambook', sans-serif;*/
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;  
+    float: left;
+}
+.divPopup_wrapper .close {
+    height: 25px;
+    margin-top: 5px;
+    text-decoration: none;
+    width: 26px;
+    color: #fff;
+    font-size: 27px;
+}
+.divPopup_wrapper .close .fa{
+    color: #fff;
+}
+#popup_container {
+    /*font-family: 'VNF-gothambook', sans-serif;*/
+    font-size: 15px;
+    width: 350px; /* Dialog will be no smaller than this */
+    border: solid 0px #7EBFDF;
+    color: #000;
+
+}
+
+
+#popup_content {
+    padding: 0px;
+    margin: 0px;
+}
+
+#popup_content.alert {
+}
+
+#popup_content.confirm {
+
+}
+
+#popup_content.prompt {
+    
+}
+
+#popup_message {
+    background: #f9f9f9;
+    display: block;
+    padding: 10px 5px;
+    text-align: center;
+
+}
+#popup_panel_two, #popup_panel{
+    background: #f9f9f9 none repeat scroll 0 0;
+    height: 57px;
+    margin: 0;
+    overflow: hidden;
+    padding: 10px 5px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+#popup_panel {
+    border-radius: 0 0 4px 4px;
+}
+#popup_panel a{
+    text-align: center;
+}
+#popup_panel_two a.ok, #popup_panel a.one{
+    background: #1b3661 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    /*left: 155px;*/
+    padding: 7px 10px;
+    /*position: absolute;*/
+    text-align: center;
+    width: 80px;
+}
+/*#popup_panel_two a.cancel{*/
+    /*background: #1b3661 none repeat scroll 0 0;*/
+    /*border: medium none;*/
+    /*color: #fff;*/
+    /*cursor: pointer;*/
+    /*font-weight: bold;*/
+    /*!*left: 170px;*!*/
+    /*padding: 7px 8px;*/
+    /*!*position: absolute;*!*/
+    /*text-align: center;*/
+    /*text-transform: uppercase;*/
+    /*width: auto;*/
+    /**/
+/*} */
+#popup_panel_two a.cancel{
+    background: #1b3661 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    /*left: 155px;*/
+    padding: 7px 10px;
+    /*position: absolute;*/
+    text-align: center;
+    width: 130px;
+
+}
+
+#popup_prompt {
+    margin: .5em 0em;
+}
+input#popup_ok{
+   
+    
+    
+    /*font-family: Arial;*/
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 23px;
+    padding: 0px;
+    height: 24px;
+    margin: 0px;
+    text-decoration: none;
+    cursor: pointer;    
+}
+input#popup_cancel {
+    /*font-family: Arial;*/
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 23px;
+    padding: 0px;
+    height: 24px;
+    margin: 0px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
