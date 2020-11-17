@@ -116,9 +116,9 @@
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="input-group mb-3">
                         <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                         </div>
-                        <input type="text" name="username" class="form-control input_user"  oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" required value="" id="tendangnhap" placeholder="Tên đăng nhập">
+                        <input type="email" name="email" class="form-control input_user"  oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" required value="" id="tendangnhap" placeholder="Nhập email">
                     </div>
                     <div class="input-group mb-2">
                         <div class="input-group-append">
@@ -137,10 +137,13 @@
 <script>
     function InvalidMsg(textbox) {
         if (textbox.value === '') {
-            textbox.setCustomValidity('Vui lòng nhập tên đăng nhập');
-        }else {
+            textbox.setCustomValidity('Vui lòng nhập email');
+        } else if (textbox.validity.typeMismatch){
+            textbox.setCustomValidity('Vui lòng nhập email hợp lệ');
+        } else {
             textbox.setCustomValidity('');
         }
+
         return true;
     }
     function InvalidMsgPass(textbox) {
@@ -160,10 +163,10 @@
             framework: 'bootstrap',
             message: 'This value is not valid',
             fields: {
-                username: {
+                email: {
                     validators: {
                         notEmpty: {
-                            message: '{{trans('Vui lòng nhập tên đăng nhập')}}'
+                            message: '{{trans('Vui lòng nhập email')}}'
                         }
                     }
                 },

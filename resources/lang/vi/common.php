@@ -1023,7 +1023,7 @@ return [
     'txt_training'=> 'Training',
     'txt_Worker'=> 'Worker',
     'txt_axit'=> 'axit',
-    'txt_users_who_have_a_tag_code_of_less_than_6_characters_are_not_added'=> 'người dùng có mã thẻ không đủ 6 ký tự không được thêm vào',
+    'txt_users_who_have_a_tag_code_of_less_than_6_characters_are_not_added'=> 'người dùng có mã cán bộ trống không được thêm vào',
     'txt_user_IDs_are_not_added'=> 'người dùng trùng mã thẻ không được thêm vào',
     'txt_users_will_be_added'=> 'người dùng được thêm vào',
     'txt_add_new_user_successfully'=> 'Thêm người dùng thành công',

@@ -420,7 +420,7 @@ $donviuser = App\Models\Donvi::find($user->donvi_id);
                 <ul id="menu-hlavni-menu" class="" style="list-style-type: none;padding: 0;">     
                     @if (isset($user->qlluong) && $user->qlluong === 1)               
                     <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-has-children">
-                        <a class="list-group-item list-group-item-action bg-light {{ $curUrl == 'danh-sach-dang-ky-lich-tuan'? 'active' : '' }}"
+                        <a class="list-group-item list-group-item-action bg-light {{ $curUrl == 'quan-ly-luong-thue'? 'active' : '' }}"
                            title="Quản lý nhập lương - thuế" href="{{ route('import_luong') }}">
                            <div id="sidebar_icon">
                                 <i class="fa fa-book"></i>
@@ -430,7 +430,7 @@ $donviuser = App\Models\Donvi::find($user->donvi_id);
                     </li>
                     @endif
                     <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-has-children">
-                        <a class="list-group-item list-group-item-action bg-light {{ $curUrl == 'danh-sach-dang-ky-lich-tuan'? 'active' : '' }}"
+                        <a class="list-group-item list-group-item-action bg-light {{ $curUrl == 'xem-luong-thue'? 'active' : '' }}"
                            title="Xem lương - thuế cá nhân" href="{{ route('xem_luong_thue') }}">
                            <div id="sidebar_icon">
                                 <i class="fa fa-book"></i>

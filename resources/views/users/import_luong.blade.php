@@ -96,7 +96,7 @@
                     <input  type="text" name="date" class="form-control input-date" id="date" value="{{$date}}">
                     <div style="margin-top: 20px;">
                         <label>{{trans('common.str_select_file_excel')}}
-                            <a href={{url('app/webroot/phpexcel/mau/mau_thu_nhap_thue.xlsx')}} target="_blank" title="Click để dowload mẫu" style="color: blue">mẫu tại đây</a>
+                            <a href={{url('app/webroot/phpexcel/mau/mau_thunhapthue.xlsx')}} target="_blank" title="Click để dowload mẫu" style="color: blue">mẫu tại đây</a>
                         </label>
                     </div>
                     <div style="margin-top: 15px">
@@ -135,7 +135,7 @@
                         <input  type="text" name="date_4" class="form-control input-date" id="date_4" value="{{$date}}">
                         <div style="margin-top: 20px;">
                             <label>{{trans('common.str_select_file_excel')}}
-                                <a href={{url('app/webroot/phpexcel/mau/mau_thanhtoan_phucap_tienluong.xlsx')}} target="_blank" title="Click để dowload mẫu" style="color: blue">mẫu tại đây</a>
+                                <a href={{url('app/webroot/phpexcel/mau/mau_phucaptienluong.xlsx')}} target="_blank" title="Click để dowload mẫu" style="color: blue">mẫu tại đây</a>
                             </label>
                         </div>
                         <div style="margin-top: 15px">
@@ -173,7 +173,7 @@
                     <input  type="text" name="date_5" class="form-control input-date" id="date_5" value="{{$date}}">
                     <div style="margin-top: 20px;">
                         <label>{{trans('common.str_select_file_excel')}}
-                            <a href={{url('app/webroot/phpexcel/mau/mau_thanhtoan_thunhap_khac.xlsx')}} target="_blank" title="Click để dowload mẫu" style="color: blue">mẫu tại đây</a>
+                            <a href="{{url('app/webroot/phpexcel/mau/mau_thunhapkhac.xlsx')}}" target="_blank" title="Click để dowload mẫu" style="color: blue">mẫu tại đây</a>
                         </label>
                     </div>
                     <div style="margin-top: 15px">
@@ -220,6 +220,8 @@
         if($("#file3").val() == ''){
             jAlert('Vui lòng chọn file excel cần nhập','Thông báo');
             return false;
+        }else {
+            $(".btn-import").prop('disabled', true);
         }
 
         if($("#file3").val().split('.').pop() !== "xlsx"){
@@ -237,6 +239,8 @@
         if($("#file4").val() == ''){
             jAlert('Vui lòng chọn file excel cần nhập','Thông báo');
             return false;
+        }else {
+            $(".btn-import").prop('disabled', true);
         }
 
         if($("#file4").val().split('.').pop() !== "xlsx"){
@@ -254,6 +258,8 @@
         if($("#file5").val() == ''){
             jAlert('Vui lòng chọn file excel cần nhập','Thông báo');
             return false;
+        }else {
+            $(".btn-import").prop('disabled', true);
         }
 
         if($("#file5").val().split('.').pop() !== "xlsx"){
@@ -333,4 +339,10 @@
     }
 
 </script>
+{{--disable--}}
+{{--<script>--}}
+{{--    $(".btn-import").click(function(){--}}
+{{--            //$(".btn-import").prop('disabled', true);--}}
+{{--    });--}}
+{{--</script>--}}
 @endsection
