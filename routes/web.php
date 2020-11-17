@@ -25,60 +25,60 @@ Auth::routes();
 
 
 Route::group(['middleware' => ['role_admin']], function () {
-    Route::get('/dashboard', 'BaocaoController@dashboard');
-    Route::get('guibaocao', 'BaocaoController@guibaocao');
-    Route::post('baocao/gui_bao_cao', 'BaocaoController@gui_bao_cao');
+    Route::get('/dashboard__tan', 'BaocaoController@dashboard');
+    Route::get('guibaocao__tan', 'BaocaoController@guibaocao');
+    Route::post('baocao__tan/gui_bao_cao', 'BaocaoController@gui_bao_cao');
 //    Route::get('baocao/gui_bao_cao', 'BaocaoController@gui_bao_cao');
-    Route::post('baocao/xem_bao_cao', 'BaocaoController@xem_bao_cao');
+    Route::post('baocao__tan/xem_bao_cao', 'BaocaoController@xem_bao_cao');
 
-    Route::get('baocao/sua_bao_cao/{id}','BaocaoController@sua_bao_cao');
-    Route::post('baocao/sua_bao_cao','BaocaoController@cap_nhat_bao_cao');
+    Route::get('baocao__tan/sua_bao_cao/{id}','BaocaoController@sua_bao_cao');
+    Route::post('baocao__tan/sua_bao_cao','BaocaoController@cap_nhat_bao_cao');
 
-    Route::get('baocao/xem_noi_dung_bao_cao', 'BaocaoController@xem_noi_dung_bao_cao');
-    Route::post('baocao/xem_noi_dung_bao_cao', 'BaocaoController@xem_nd_bao_cao');
-    Route::get('baocao/bao_cao_da_gui', 'BaocaoController@bao_cao_da_gui');
-    Route::post('baocao/bao_cao_da_gui', 'BaocaoController@kq_bao_cao_da_gui');
+    Route::get('baocao__tan/xem_noi_dung_bao_cao', 'BaocaoController@xem_noi_dung_bao_cao');
+    Route::post('baocao__tan/xem_noi_dung_bao_cao', 'BaocaoController@xem_nd_bao_cao');
+    Route::get('baocao__tan/bao_cao_da_gui', 'BaocaoController@bao_cao_da_gui');
+    Route::post('baocao__tan/bao_cao_da_gui', 'BaocaoController@kq_bao_cao_da_gui');
     //lãnh đạo
-    
-    Route::post('baocao/congviec ','BaocaoController@kq_congviec');
+
+    Route::post('baocao__tan/congviec ','BaocaoController@kq_congviec');
     //Lên kế hoạch
-    Route::get('baocao/len_ke_hoach','BaocaoController@len_ke_hoach');
-    Route::post('baocao/len_ke_hoach','BaocaoController@store_len_ke_hoach');
-    Route::get('baocao/xem_chi_tiet_ke_hoach','BaocaoController@xem_chi_tiet_ke_hoach');
-    Route::post('baocao/xem_ke_hoach', 'BaocaoController@xem_ke_hoach');
-    Route::get('baocao/sua_ke_hoach/{id}','BaocaoController@sua_ke_hoach');
-    Route::post('baocao/sua_ke_hoach','BaocaoController@cap_nhat_ke_hoach');
+    Route::get('baocao__tan/len_ke_hoach','BaocaoController@len_ke_hoach');
+    Route::post('baocao__tan/len_ke_hoach','BaocaoController@store_len_ke_hoach');
+    Route::get('baocao__tan/xem_chi_tiet_ke_hoach','BaocaoController@xem_chi_tiet_ke_hoach');
+    Route::post('baocao__tan/xem_ke_hoach', 'BaocaoController@xem_ke_hoach');
+    Route::get('baocao__tan/sua_ke_hoach/{id}','BaocaoController@sua_ke_hoach');
+    Route::post('baocao__tan/sua_ke_hoach','BaocaoController@cap_nhat_ke_hoach');
 
-    //Báo cáo công việc 
-    Route::post('baocao/report_work_detail','BaocaoController@report_work_detail');
-    Route::post('baocao/viewDetail_report','BaocaoController@viewDetail_report');
-    Route::post('baocao/agreement_report','BaocaoController@agreement_report');
-    Route::get('baocao/commonBaocao_congviecs','BaocaoController@commonBaocao_congviecs');
-    Route::get('baocao/view_baocao_notifi','BaocaoController@view_baocao_notifi');
-    Route::get('baocao/view_agreement_report','BaocaoController@view_agreement_report');
+    //Báo cáo công việc
+    Route::post('baocao__tan/report_work_detail','BaocaoController@report_work_detail');
+    Route::post('baocao__tan/viewDetail_report','BaocaoController@viewDetail_report');
+    Route::post('baocao__tan/agreement_report','BaocaoController@agreement_report');
+    Route::get('baocao__tan/commonBaocao_congviecs','BaocaoController@commonBaocao_congviecs');
+    Route::get('baocao__tan/view_baocao_notifi','BaocaoController@view_baocao_notifi');
+    Route::get('baocao__tan/view_agreement_report','BaocaoController@view_agreement_report');
 
-    Route::get('baocao/thong-ke-theo-don-vi', 'BaocaoController@thong_ke_theo_don_vi')->name('baocao.thong_ke_theo_don_vi');
-    Route::get('baocao/thong-ke-theo-ca-nhan', 'BaocaoController@thong_ke_theo_ca_nhan')->name('baocao.thong_ke_theo_ca_nhan');
+    Route::get('baocao__tan/thong-ke-theo-don-vi', 'BaocaoController@thong_ke_theo_don_vi')->name('baocao.thong_ke_theo_don_vi');
+    Route::get('baocao__tan/thong-ke-theo-ca-nhan', 'BaocaoController@thong_ke_theo_ca_nhan')->name('baocao.thong_ke_theo_ca_nhan');
 
-    Route::get('baocao/thong_ke_van_ban/don_vi', 'BaocaoController@baoCaoThongKeDonVi')->name('baocaothongke.donvi');
-    Route::get('baocao/thong_ke_van_ban/ca_nhan', 'BaocaoController@baoCaoThongKeCaNhan')->name('baocaothongke.canhan');
-    Route::get('baocao/xem_thong_ke_van_ban', 'BaocaoController@xemBaoCaoThongKe')->name('baocaothongke.danhsach');
+    Route::get('baocao__tan/thong_ke_van_ban/don_vi', 'BaocaoController@baoCaoThongKeDonVi')->name('baocaothongke.donvi');
+    Route::get('baocao__tan/thong_ke_van_ban/ca_nhan', 'BaocaoController@baoCaoThongKeCaNhan')->name('baocaothongke.canhan');
+    Route::get('baocao__tan/xem_thong_ke_van_ban', 'BaocaoController@xemBaoCaoThongKe')->name('baocaothongke.danhsach');
 
     //Thay đổi mật khẩu
 
-    Route::get('cap_nhat_thong_tin', 'Auth\LoginController@cap_nhat_thong_tin');
-    Route::get('cong-viec-da-giao', 'BaocaoController@cong_viec_da_giao');
-    Route::get('dieu-hanh', 'BaocaoController@dieu_hanh');
+    Route::get('cap_nhat_thong_tin__tan', 'Auth\LoginController@cap_nhat_thong_tin');
+    Route::get('cong-viec-da-giao__tan', 'BaocaoController@cong_viec_da_giao');
+    Route::get('dieu-hanh__tan', 'BaocaoController@dieu_hanh');
     Route::get('doi-mat-khau/{id}', 'Auth\LoginController@doi_mat_khau');
     Route::post('doi-mat-khau/{id}', 'Auth\LoginController@cap_nhat_mat_khau');
 
-    Route::get('danh_sach_phong_hop','PhongHopController@PhongHop')->name('phonghop.danhsachphonghop'); 
-    Route::get('dang_ky_lich_tuan','PhongHopController@dang_ky_lich_tuan')->name('phonghop.dangkylichtuan');
-    Route::post('save_dang_ky_lich_tuan', 'PhongHopController@save_dang_ky_lich_tuan')->name('phonghop.savedangkylichtuan');
-    Route::post('them_phong_hop', 'PhongHopController@ThemPhongHop')->name('phonghop.themphonghop');
-    Route::get('danh-sach-dang-ky-lich-tuan', 'PhongHopController@list_dang_ky_lich_tuan')->name('phonghop.danhsachdangkylichtuan');
-    Route::get('sua-dang-ky-lich-tuan/{lichtuanId}', 'PhongHopController@edit_dang_ky_lich_tuan')->name('editdangkylichtuan'); 
-    Route::post('duyet-dang-ky-lich-tuan', 'PhongHopController@approve_dang_ky_lich_tuan')->name('phonghop.duyetdangkylichtuan');
+    Route::get('danh_sach_phong_hop__tan','PhongHopController@PhongHop')->name('phonghop.danhsachphonghop');
+    Route::get('dang_ky_lich_tuan__tan','PhongHopController@dang_ky_lich_tuan')->name('phonghop.dangkylichtuan');
+    Route::post('save_dang_ky_lich__tan', 'PhongHopController@save_dang_ky_lich_tuan')->name('phonghop.savedangkylichtuan');
+    Route::post('them_phong_hop__tan', 'PhongHopController@ThemPhongHop')->name('phonghop.themphonghop');
+    Route::get('danh-sach-dang-ky-lich-tuan__tan', 'PhongHopController@list_dang_ky_lich_tuan')->name('phonghop.danhsachdangkylichtuan');
+    Route::get('sua-dang-ky-lich-tuan__tan/{lichtuanId}', 'PhongHopController@edit_dang_ky_lich_tuan')->name('editdangkylichtuan');
+    Route::post('duyet-dang-ky-lich-tuan__tan', 'PhongHopController@approve_dang_ky_lich_tuan')->name('phonghop.duyetdangkylichtuan');
 
     // Công việc
     Route::group(['prefix' => 'congviec'], function () {
@@ -518,9 +518,9 @@ Route::group(['middleware' => ['role_admin']], function () {
 
     Route::post('save_gop_y', 'GopYController@save_gop_y');
 
-    Route::get('nhap-van-ban-ban-hanh', 'VanbanController@nhap_vanban_banhanh')->name('nhap_vanban_banhanh');
-    Route::get('danh-sach-van-ban-ban-hanh', 'VanbanController@danhsach_vanban_banhanh')->name('danhsach_vanban_banhanh'); 
-    Route::get('sua-van-ban-ban-hanh/{vanbanbanhanhId}', 'VanbanController@sua_vanban_banhanh')->name('sua_vanban_banhanh');
+    Route::get('nhap-van-ban-ban-hanh__tan', 'VanbanController@nhap_vanban_banhanh')->name('nhap_vanban_banhanh');
+    Route::get('danh-sach-van-ban-ban-hanh__tan', 'VanbanController@danhsach_vanban_banhanh')->name('danhsach_vanban_banhanh');
+    Route::get('sua-van-ban-ban-hanh__tan/{vanbanbanhanhId}', 'VanbanController@sua_vanban_banhanh')->name('sua_vanban_banhanh');
     Route::post('save-van-ban-ban-hanh', 'VanbanController@save_vanban_banhanh')->name('save_vanban_banhanh');
     Route::get('danh-sach-tai-khoan', 'UserController@danh_sach_tai_khoan')->name('danh_sach_tai_khoan'); 
     Route::get('them-tai-khoan', 'UserController@them_tai_khoan')->name('them_tai_khoan');

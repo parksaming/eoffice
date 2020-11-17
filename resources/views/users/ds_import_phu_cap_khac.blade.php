@@ -10,7 +10,7 @@
             <div class="clearfix"></div>
             <div class="table-responsive" style="margin-top: 15px;">
                 @if (!isset($error))
-                    <div style="height: 550px;overflow: auto;">
+                    <div style="height: auto;overflow: auto;">
                         <table class="table table-bordered table-striped bulk_action dragscroll tb-dragscroll" style="display: inline-table;">
                             <thead>
                             <tr class="headings" style="text-align: center">
@@ -42,20 +42,20 @@
                                 @foreach($users as $user)
                                     <tr class="even pointer">
                                         @if(strlen($user->macanbo) == '' )
-                                            <td>{{ $i++}}</td>
-                                            <td style="color: red ; text-align: left;white-space: nowrap;"> {{ $user->macanbo }}</td>
-                                            <td style="color: red ;text-align: left;white-space: nowrap;">{{$user->fullname}}</td>
-                                            <td style="color: red ;text-align: left;">{{$user->sotiet_tien_giang}}</td>
-                                            <td style="color: red ;text-align: left;">{{$user->tien_giang}}</td>
-                                            <td style="color: red">{{$user->hs_quan_ly_phi}}</td>
-                                            <td style="color: red">{{$user->quan_ly_phi}}</td>
-                                            <td style="color: red">{{$user->hs_luong_tang_them}}</td>
-                                            <td style="color: red">{{$user->luong_tang_them}}</td>
-                                            <td style="color: red">{{$user->sothang_dienthoai}}</td>
-                                            <td style="color: red">{{$user->khoan_dien_thoai}}</td>
-                                            <td style="color: red">{{$user->thu_nhap_khac}}</td>
-                                            <td style="color: red">{{$user->trutam_ungthue_tncn}}</td>
-                                            <td style="color: red">{{$user->thuc_nhan}}</td>
+{{--                                            <td>{{ $i++}}</td>--}}
+{{--                                            <td style="color: red ; text-align: left;white-space: nowrap;"> {{ $user->macanbo }}</td>--}}
+{{--                                            <td style="color: red ;text-align: left;white-space: nowrap;">{{$user->fullname}}</td>--}}
+{{--                                            <td style="color: red ;text-align: left;">{{$user->sotiet_tien_giang}}</td>--}}
+{{--                                            <td style="color: red ;text-align: left;">{{$user->tien_giang}}</td>--}}
+{{--                                            <td style="color: red">{{$user->hs_quan_ly_phi}}</td>--}}
+{{--                                            <td style="color: red">{{$user->quan_ly_phi}}</td>--}}
+{{--                                            <td style="color: red">{{$user->hs_luong_tang_them}}</td>--}}
+{{--                                            <td style="color: red">{{$user->luong_tang_them}}</td>--}}
+{{--                                            <td style="color: red">{{$user->sothang_dienthoai}}</td>--}}
+{{--                                            <td style="color: red">{{$user->khoan_dien_thoai}}</td>--}}
+{{--                                            <td style="color: red">{{$user->thu_nhap_khac}}</td>--}}
+{{--                                            <td style="color: red">{{$user->trutam_ungthue_tncn}}</td>--}}
+{{--                                            <td style="color: red">{{$user->thuc_nhan}}</td>--}}
                                         @else
                                             <td>{{$i++}}</td>
                                             <td style="text-align: left;white-space: nowrap;">  {{$user->macanbo}}</td>
@@ -84,10 +84,11 @@
                     </div>
                     <div class="search-page-form">
                         <div class="page-content">
-                            @if (isset($users) && sizeof($users) > 0)                            
+                            @if (isset($users) && sizeof($users) > 0)
                                 <div class="data-contaner">
                                     <?php $modelParent = $users[0];?>
                                     @foreach($users as $index => $user)
+
                                             <input class="user" type="hidden"  data-date="{{ $date }}" data-fullname="{{ $user->fullname }}"
                                                    data-macanbo="{{ $user->macanbo }}"
                                                    data-sotiet_tien_giang="{{ $user->sotiet_tien_giang }}"
@@ -106,9 +107,9 @@
                                     @endforeach
                                 </div>
                                 <div class="number-record" style="padding-bottom: 10px;">
-                                    @if($countMaCanBoEmpty !=0)
-                                        <p style="margin-bottom: 10px; color: red;">{{trans('common.txt_have')}} {{$countMaCanBoEmpty}} {{trans('common.txt_users_who_have_a_tag_code_of_less_than_6_characters_are_not_added')}}.</p>
-                                    @endif
+{{--                                    @if($countMaCanBoEmpty !=0)--}}
+{{--                                        <p style="margin-bottom: 10px; color: red;">{{trans('common.txt_have')}} {{$countMaCanBoEmpty}} {{trans('common.txt_users_who_have_a_tag_code_of_less_than_6_characters_are_not_added')}}.</p>--}}
+{{--                                    @endif--}}
 
                                     @if($total)
                                         <p>  {{trans('common.txt_have')}} {{$total}} {{trans('common.txt_users_will_be_added')}}.</p>
@@ -186,11 +187,15 @@
                 thuc_nhan: itemUser.data('thuc_nhan'),
                 _token: token
             }, function (data) {
+                console.log(data);
 
                 nextIndex = data.next_index;
+                //console.log(nextIndex);
                 percent = data.percent;
+                //console.log(percent);
                 total = data.total;
-                console.log(data);
+                //console.log(total);
+                //console.log(data);
                 if (nextIndex < total) {
                     $('.progress-bar').css('width', percent + '%');
                     $("#offset").html(nextIndex);

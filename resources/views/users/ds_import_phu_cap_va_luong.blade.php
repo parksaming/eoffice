@@ -10,7 +10,7 @@
             <div class="clearfix"></div>
             <div class="table-responsive" style="margin-top: 15px;">
                 @if (!isset($error))
-                    <div style="height: 550px;overflow: auto;">
+                    <div style="auto;overflow: auto;">
                         <table class="table table-bordered table-striped bulk_action dragscroll tb-dragscroll">
                             <thead>
                             <tr class="headings" style="text-align: center">
@@ -66,38 +66,38 @@
                                 @foreach($users as $user)
                                     <tr class="even pointer">
                                         @if(strlen($user->macanbo) == '' )
-                                            <td>{{ $i++}}</td>
-                                            <td style="color: red ; text-align: left;white-space: nowrap;">  {{ $user->macanbo }}</td>
-                                            <td style="color: red ;text-align: left;white-space: nowrap;">{{$user->fullname}}</td>
-                                            <td style="color: red ;text-align: left;">{{$user->hs_luong_ngach_bac}}</td>
-                                            <td style="color: red ;text-align: left;">{{$user->luong_ngach_bac}}</td>
-                                            <td style="color: red">{{$user->hs_phucap_chucvu}}</td>
-                                            <td style="color: red">{{$user->phucap_chucvu}}</td>
-                                            <td style="color: red">{{$user->tyle_phucap_thamnien_vuotkhung}}</td>
-                                            <td style="color: red">{{$user->phucap_thamnien_vuotkhung}}</td>
-                                            <td style="color: red">{{$user->tyle_phucap_thamnien_nghe}}</td>
-                                            <td style="color: red">{{$user->phucap_thamnien_nghe}}</td>
-                                            <td style="color: red">{{$user->tyle_phucap_uudai_nghe}}</td>
-                                            <td style="color: red">{{$user->phucap_uudai_nghe}}</td>
-                                            <td style="color: red">{{$user->hs_phucap_khac}}</td>
-                                            <td style="color: red">{{$user->phucap_khac}}</td>
-                                            <td style="color: red">{{$user->hs_phucap_congtac_dang}}</td>
-                                            <td style="color: red">{{$user->phucap_congtac_dang}}</td>
-                                            <td style="color: red">{{$user->hs_luong_tang_them}}</td>
-                                            <td style="color: red">{{$user->luong_tang_them}}</td>
+{{--                                            <td>{{ $i++}}</td>--}}
+{{--                                            <td style="color: red ; text-align: left;white-space: nowrap;">  {{ $user->macanbo }}</td>--}}
+{{--                                            <td style="color: red ;text-align: left;white-space: nowrap;">{{$user->fullname}}</td>--}}
+{{--                                            <td style="color: red ;text-align: left;">{{$user->hs_luong_ngach_bac}}</td>--}}
+{{--                                            <td style="color: red ;text-align: left;">{{$user->luong_ngach_bac}}</td>--}}
+{{--                                            <td style="color: red">{{$user->hs_phucap_chucvu}}</td>--}}
+{{--                                            <td style="color: red">{{$user->phucap_chucvu}}</td>--}}
+{{--                                            <td style="color: red">{{$user->tyle_phucap_thamnien_vuotkhung}}</td>--}}
+{{--                                            <td style="color: red">{{$user->phucap_thamnien_vuotkhung}}</td>--}}
+{{--                                            <td style="color: red">{{$user->tyle_phucap_thamnien_nghe}}</td>--}}
+{{--                                            <td style="color: red">{{$user->phucap_thamnien_nghe}}</td>--}}
+{{--                                            <td style="color: red">{{$user->tyle_phucap_uudai_nghe}}</td>--}}
+{{--                                            <td style="color: red">{{$user->phucap_uudai_nghe}}</td>--}}
+{{--                                            <td style="color: red">{{$user->hs_phucap_khac}}</td>--}}
+{{--                                            <td style="color: red">{{$user->phucap_khac}}</td>--}}
+{{--                                            <td style="color: red">{{$user->hs_phucap_congtac_dang}}</td>--}}
+{{--                                            <td style="color: red">{{$user->phucap_congtac_dang}}</td>--}}
+{{--                                            <td style="color: red">{{$user->hs_luong_tang_them}}</td>--}}
+{{--                                            <td style="color: red">{{$user->luong_tang_them}}</td>--}}
 {{--                                            <td style="color: red">{{$user->hs_quan_li_phi}}</td>--}}
 {{--                                            <td style="color: red">{{$user->quan_li_phi}}</td>--}}
-                                            <td style="color: red">{{$user->tong_thu_nhap}}</td>
-                                            <td style="color: red">{{$user->khautru_BHXH}}</td>
-                                            <td style="color: red">{{$user->khautru_BHTN}}</td>
-                                            <td style="color: red">{{$user->khautru_BHYT}}</td>
-                                            <td style="color: red">{{$user->khautru_KPCD}}</td>
-                                            <td style="color: red">{{$user->tong_khau_tru}}</td>
-                                            <td style="color: red">{{$user->thue_TNCN}}</td>
-                                            <td style="color: red">{{$user->tru_tamung}}</td>
-                                            <td style="color: red">{{$user->chiphiphatsinhkhac}}</td>
-                                            <td style="color: red">{{$user->thuclinh}}</td>
-                                            <td style="color: red">{{$user->so_taikhoan_canhan}}</td>
+{{--                                            <td style="color: red">{{$user->tong_thu_nhap}}</td>--}}
+{{--                                            <td style="color: red">{{$user->khautru_BHXH}}</td>--}}
+{{--                                            <td style="color: red">{{$user->khautru_BHTN}}</td>--}}
+{{--                                            <td style="color: red">{{$user->khautru_BHYT}}</td>--}}
+{{--                                            <td style="color: red">{{$user->khautru_KPCD}}</td>--}}
+{{--                                            <td style="color: red">{{$user->tong_khau_tru}}</td>--}}
+{{--                                            <td style="color: red">{{$user->thue_TNCN}}</td>--}}
+{{--                                            <td style="color: red">{{$user->tru_tamung}}</td>--}}
+{{--                                            <td style="color: red">{{$user->chiphiphatsinhkhac}}</td>--}}
+{{--                                            <td style="color: red">{{$user->thuclinh}}</td>--}}
+{{--                                            <td style="color: red">{{$user->so_taikhoan_canhan}}</td>--}}
                                         @else
                                             <td>{{$i++}}</td>
                                             <td style="text-align: left;white-space: nowrap;">  {{$user->macanbo}}</td>
@@ -185,9 +185,9 @@
                                     @endforeach
                                 </div>
                                 <div class="number-record" style="padding-bottom: 10px;">
-                                    @if($countMaCanBoEmpty !=0)
-                                        <p style="margin-bottom: 10px; color: red;">{{trans('common.txt_have')}} {{$countMaCanBoEmpty}} {{trans('common.txt_users_who_have_a_tag_code_of_less_than_6_characters_are_not_added')}}.</p>
-                                    @endif
+{{--                                    @if($countMaCanBoEmpty !=0)--}}
+{{--                                        <p style="margin-bottom: 10px; color: red;">{{trans('common.txt_have')}} {{$countMaCanBoEmpty}} {{trans('common.txt_users_who_have_a_tag_code_of_less_than_6_characters_are_not_added')}}.</p>--}}
+{{--                                    @endif--}}
 
                                     @if($total)
                                         <p>  {{trans('common.txt_have')}} {{$total}} {{trans('common.txt_users_will_be_added')}}.</p>

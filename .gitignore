@@ -46,7 +46,7 @@ fabric.properties
 
 /vendor
 /node_modules
-
+/uploads
 database/database.sqlite
 public/files/.quarantine/
 public/files/.tmb/*

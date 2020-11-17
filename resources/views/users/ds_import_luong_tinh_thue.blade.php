@@ -10,7 +10,7 @@
             <div class="clearfix"></div>
             <div class="table-responsive" style="margin-top: 15px;">
                 @if (!isset($error))
-                    <div style="height: 550px;overflow: auto;">
+                    <div style="height: auto;overflow: auto;">
                         <table class="table table-bordered table-striped bulk_action dragscroll tb-dragscroll">
                             <thead>
                             <tr class="headings" style="text-align: center">
@@ -50,34 +50,34 @@
                                 @foreach($users as $user)
                                     <tr class="even pointer">
                                         @if(strlen($user->macanbo) == '' )
-                                            <td>{{ $i++}}</td>
-                                            <td style="color: red ; text-align: left;white-space: nowrap;">  {{ $user->macanbo }}</td>
-                                            <td style="color: red ;text-align: left;white-space: nowrap;">{{$user->fullname}}</td>
-                                            <td style="color: red ;text-align: left;">{{$user->luong_ngach_bac}}</td>
-                                            <td style="color: red ;text-align: left;">{{$user->phucap_chucvu}}</td>
-                                            <td style="color: red">{{$user->quan_ly_phi}}</td>
-                                            <td style="color: red">{{$user->phucap_congtac_dang}}</td>
-                                            <td style="color: red">{{$user->luong_tang_them}}</td>
-                                            <td style="color: red">{{$user->phucap_thamnien_vuotkhung}}</td>
-                                            <td style="color: red">{{$user->phucap_khac}}</td>
-                                            <td style="color: red">{{$user->tien_giang}}</td>
-                                            <td style="color: red">{{$user->tiencong_nckh}}</td>
-                                            <td style="color: red">{{$user->phuc_loi}}</td>
-                                            <td style="color: red">{{$user->luongthang_muoi_ba}}</td>
-                                            <td style="color: red">{{$user->thunhap_khac}}</td>
-                                            <td style="color: red">{{$user->tong_cackhoan_tinhthue}}</td>
-                                            <td style="color: red">{{$user->phucap_thamnien_nghe}}</td>
-                                            <td style="color: red">{{$user->phucap_uudai_nghe}}</td>
-                                            <td style="color: red">{{$user->tongcackhoan_khongtinhthue}}</td>
-                                            <td style="color: red">{{$user->baohiem_thatnghiep_truvaoluong}}</td>
-                                            <td style="color: red">{{$user->baohiem_xahoi_truvaoluong}}</td>
-                                            <td style="color: red">{{$user->baohiem_yte_truvaoluong}}</td>
-                                            <td style="color: red">{{$user->kinhphi_congdoan_truvaoluong}}</td>
-                                            <td style="color: red">{{$user->giamtru_banthan}}</td>
-                                            <td style="color: red">{{$user->tongtien_giamtru_nguoiphuthuoc}}</td>
-                                            <td style="color: red">{{$user->tong_cackhoan_giamtru}}</td>
-                                            <td style="color: red">{{$user->tong_thunhap_tinhthue}}</td>
-                                            <td style="color: red">{{$user->thue_TNCN}}</td>
+{{--                                            <td>{{ $i++}}</td>--}}
+{{--                                            <td style="color: red ; text-align: left;white-space: nowrap;">  {{ $user->macanbo }}</td>--}}
+{{--                                            <td style="color: red ;text-align: left;white-space: nowrap;">{{$user->fullname}}</td>--}}
+{{--                                            <td style="color: red ;text-align: left;">{{$user->luong_ngach_bac}}</td>--}}
+{{--                                            <td style="color: red ;text-align: left;">{{$user->phucap_chucvu}}</td>--}}
+{{--                                            <td style="color: red">{{$user->quan_ly_phi}}</td>--}}
+{{--                                            <td style="color: red">{{$user->phucap_congtac_dang}}</td>--}}
+{{--                                            <td style="color: red">{{$user->luong_tang_them}}</td>--}}
+{{--                                            <td style="color: red">{{$user->phucap_thamnien_vuotkhung}}</td>--}}
+{{--                                            <td style="color: red">{{$user->phucap_khac}}</td>--}}
+{{--                                            <td style="color: red">{{$user->tien_giang}}</td>--}}
+{{--                                            <td style="color: red">{{$user->tiencong_nckh}}</td>--}}
+{{--                                            <td style="color: red">{{$user->phuc_loi}}</td>--}}
+{{--                                            <td style="color: red">{{$user->luongthang_muoi_ba}}</td>--}}
+{{--                                            <td style="color: red">{{$user->thunhap_khac}}</td>--}}
+{{--                                            <td style="color: red">{{$user->tong_cackhoan_tinhthue}}</td>--}}
+{{--                                            <td style="color: red">{{$user->phucap_thamnien_nghe}}</td>--}}
+{{--                                            <td style="color: red">{{$user->phucap_uudai_nghe}}</td>--}}
+{{--                                            <td style="color: red">{{$user->tongcackhoan_khongtinhthue}}</td>--}}
+{{--                                            <td style="color: red">{{$user->baohiem_thatnghiep_truvaoluong}}</td>--}}
+{{--                                            <td style="color: red">{{$user->baohiem_xahoi_truvaoluong}}</td>--}}
+{{--                                            <td style="color: red">{{$user->baohiem_yte_truvaoluong}}</td>--}}
+{{--                                            <td style="color: red">{{$user->kinhphi_congdoan_truvaoluong}}</td>--}}
+{{--                                            <td style="color: red">{{$user->giamtru_banthan}}</td>--}}
+{{--                                            <td style="color: red">{{$user->tongtien_giamtru_nguoiphuthuoc}}</td>--}}
+{{--                                            <td style="color: red">{{$user->tong_cackhoan_giamtru}}</td>--}}
+{{--                                            <td style="color: red">{{$user->tong_thunhap_tinhthue}}</td>--}}
+{{--                                            <td style="color: red">{{$user->thue_TNCN}}</td>--}}
                                         @else
                                             <td>{{$i++}}</td>
                                             <td style="text-align: left;white-space: nowrap;">  {{$user->macanbo}}</td>
@@ -158,9 +158,9 @@
                                     @endforeach
                                 </div>
                                 <div class="number-record" style="padding-bottom: 10px;">
-                                    @if($countMaCanBoEmpty !=0)
-                                        <p style="margin-bottom: 10px; color: red;">{{trans('common.txt_have')}} {{$countMaCanBoEmpty}} {{trans('common.txt_users_who_have_a_tag_code_of_less_than_6_characters_are_not_added')}}.</p>
-                                    @endif
+{{--                                    @if($countMaCanBoEmpty !=0)--}}
+{{--                                        <p style="margin-bottom: 10px; color: red;">{{trans('common.txt_have')}} {{$countMaCanBoEmpty}} {{trans('common.txt_users_who_have_a_tag_code_of_less_than_6_characters_are_not_added')}}.</p>--}}
+{{--                                    @endif--}}
 
                                     @if($total)
                                         <p>  {{trans('common.txt_have')}} {{$total}} {{trans('common.txt_users_will_be_added')}}.</p>

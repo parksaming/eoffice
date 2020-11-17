@@ -63,32 +63,32 @@ class LoginController extends Controller
      */
     public function login(LoginRequest $request)
     {
-        $username = Input::get('username');
+        $email = Input::get('email');
         $password = Input::get('password');
 
-        $data['User']['username'] = $username;
+        $data['User']['email'] = $email;
         $data['User']['password'] = $password;
         $result = $this->postApi('http://hrm.udn.vn/apis/login', $data);
 
-        $user_name = '';
+        $user_email = '';
         if ($result['error'] != 0) {
-            $user = User::select('users.*')->where('users.username', '=', $username)->first();
+            $user = User::select('users.*')->where('users.email', '=', $email)->first();
             if ($user) {
                 // $user->type = 'local';
                 if (Hash::check($password, $user->password)) {
-                    $user_name = $user->username;
+                    $user_email = $user->email;
                     $user->user_id_login = $user->id;
                     $user->type = 'local';
                     Session::put('user', $user->toArray());
-                    Session::put('user_logged_username', $user->username);
+                    Session::put('user_logged_username', $user->email);
                     return redirect('/');
                 } else {
-                    Session::flash('message', 'Tên đăng nhập hoặc mật khẩu không chính xác');
+                    Session::flash('message', 'Email sai hoặc mật khẩu không đúng');
                     Session::flash('alert-class', "danger");
                     return redirect('dang-nhap');
                 }
             } else {
-                Session::flash('message', 'Tên đăng nhập hoặc mật khẩu không chính xác');
+                Session::flash('message', 'Email sai hoặc mật khẩu không đúng');
                 Session::flash('alert-class', "danger");
                 return redirect('dang-nhap');
             }
