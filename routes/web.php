@@ -552,6 +552,11 @@ Route::resource('congviec_chitiet', 'CongviecChiTietController');
 
 Route::group(['prefix' => 'api'], function () {
     Route::get('get-lich-tuan', 'ApiController@GetLichTuan');
+
+});
+
+Route::group(['middleware' => ['web']], function () {
+    Route::post('api/dang-nhap', 'ApiController@LoginTest');
 });
 Route::get('/clear-cache', function() {
     Artisan::call('cache:clear');
