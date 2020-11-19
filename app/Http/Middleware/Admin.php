@@ -44,9 +44,9 @@ class Admin
                 $users=\Illuminate\Support\Facades\Session::get('users');
             }
           if ($users){
-                dd('vao day');
+                //dd('vao day');
           }else{
-              return redirect('http://localhost/dieuhanhtacnghiep/dang-nhap.html');
+              return redirect('http://dieuhanh.ute.udn.vn/dang-nhap.html');
           }
 
         }
