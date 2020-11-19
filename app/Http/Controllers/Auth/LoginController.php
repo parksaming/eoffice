@@ -105,6 +105,46 @@ class LoginController extends Controller
         }
     }
 
+//    public function createToken($user)
+//    {
+//        $tokenResult = $user->createToken('token');
+//        $token = $tokenResult->token;
+//        $token->expires_at = Carbon::now()->addHour(5);
+//        $token->save();
+//        return $tokenResult->accessToken;
+//    }
+
+    public function generateToken()
+    {
+        $user = new User();
+        $user = str_random(60);
+        $user->save();
+
+        return $user->api_token;
+    }
+
+    public function LoginTest111(Request $request){
+        $validator = \Validator::make($request->all(), [
+            'email' => 'required|string|email|max:255',
+            'password' => 'required|string|min:6|confirmed',
+        ]);
+        if ($this->attemptLogin($request)) {
+            $user = $this->guard()->user();
+
+            $user->generateToken();
+            //dd($user);
+
+            session(['user' => $user->toArray()]);
+            $userSession = session('user');
+            return response()->json([
+                'data' => $user->toArray(),
+            ]);
+        }
+
+        return $this->sendFailedLoginResponse($request);
+    }
+
+
     function postApi($url, $pvars)
     {
         $timeout = 30;
@@ -324,7 +364,7 @@ class LoginController extends Controller
         //return redirect($url);
         $request->session()->flush();
 
-        return redirect('dang-nhap');
+        return redirect('http://localhost/dieuhanhtacnghiep/dang-nhap.html');
     }
     public function logout_by_sso(Request $request){
         $request->session()->flush();

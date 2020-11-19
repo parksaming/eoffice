@@ -20,6 +20,7 @@ class VerifyCsrfToken extends BaseVerifier
         'process_import_tong_hop_thu_nhap',
         'import_update_thu_thue',
         'import_update_luong_phu_cap',
-        'process_import_luong_phu_cap'
+        'process_import_luong_phu_cap',
+        'api/dang-nhap'
     ];
 }
