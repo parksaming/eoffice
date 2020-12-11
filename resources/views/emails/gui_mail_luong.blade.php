@@ -194,7 +194,6 @@
     <div class="tablescroll-scroll dragscroll dragscroll-tb tb-end ">
             <h3 style="font-family: 'Times New Roman',serif; font-variant: normal!important;">I. Các khoản tính thuế</h3>
             <table class="table table-bordered table-striped txt-center" border="1" width="100%" style="border-collapse:collapse;text-align: center; width: 50%; margin-left:auto; margin-right:auto;font-family:'Times New Roman', serif;font-variant:normal;font-size: 1rem;">
-                {{ dd($data) }}
                 <tr>
                     <th scope="row" style="text-align: center;font-weight: 700;background: #ffe599;font-size: 1rem;">STT</th>
                     <th scope="row" style="text-align: center;font-weight: 700;background: #ffe599;height: 40px">Danh mục</th>
