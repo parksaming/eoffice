@@ -5,7 +5,7 @@ Route::get('/',function () {
     if (session('user')) {
         return redirect(route('import_luong'));
     }else{
-        return redirect('http://dieuhanh.ute.udn.vn/dang-nhap.html');
+       return redirect('http://dieuhanh.ute.udn.vn/dang-nhap.html');
     }
 });
 

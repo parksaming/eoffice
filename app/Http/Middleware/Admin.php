@@ -20,15 +20,6 @@ class Admin
      * @return mixed
      */
     public function handle($request, Closure $next)    {
-//       $userSession = $request->session()->get('user');
-//        $users=\Illuminate\Support\Facades\Session::get('users');
-//        dd($users);
-//       //dd($userSession);
-//        if (isset($userSession) && $userSession != null){
-//
-//        }else{
-//            return redirect('http://localhost/dieuhanhtacnghiep/dang-nhap.html');
-//        }
 
         if (!\Illuminate\Support\Facades\Session::get('user')) {
             if (request()->has('login')){
@@ -38,16 +29,17 @@ class Admin
                 if ($id && $token && $verify){
                     $idDecode = base64_decode($id);
                     $user =  User::where('id', $idDecode)->first();
-                    $users = Session::put('user', $user->toArray());
+                    $users = Session('user',$user->toArray());
+                    Session::put('user', $user->toArray());
                 }
             }else{
                 $users=\Illuminate\Support\Facades\Session::get('users');
             }
-          if ($users){
-                //dd('vao day');
-          }else{
-              return redirect('http://dieuhanh.ute.udn.vn/dang-nhap.html');
-          }
+            if ($users){
+
+            }else{
+                return redirect('http://dieuhanh.ute.udn.vn/dang-nhap.html');
+            }
 
         }
 

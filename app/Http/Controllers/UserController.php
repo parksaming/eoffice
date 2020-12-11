@@ -444,12 +444,13 @@ class UserController extends Controller
                 !isset($allDataInSheet[4]["O"]) ||
                 !isset($allDataInSheet[4]["Q"]) ||
                 !isset($allDataInSheet[4]["S"]) ||
-                !isset($allDataInSheet[4]["T"]) ||
-                !isset($allDataInSheet[4]["Y"]) ||
-                !isset($allDataInSheet[4]["Z"]) ||
+                !isset($allDataInSheet[4]["U"]) ||
+                !isset($allDataInSheet[4]["V"]) ||
                 !isset($allDataInSheet[4]["AA"]) ||
                 !isset($allDataInSheet[4]["AB"]) ||
                 !isset($allDataInSheet[4]["AC"]) ||
+                !isset($allDataInSheet[4]["AD"]) ||
+                !isset($allDataInSheet[4]["AE"]) ||
 
                 !isset($allDataInSheet[5]["C"]) ||
                 !isset($allDataInSheet[5]["D"]) ||
@@ -467,11 +468,13 @@ class UserController extends Controller
                 !isset($allDataInSheet[5]["P"]) ||
                 !isset($allDataInSheet[5]["Q"]) ||
                 !isset($allDataInSheet[5]["R"]) ||
+                !isset($allDataInSheet[5]["S"]) ||
                 !isset($allDataInSheet[5]["T"]) ||
-                !isset($allDataInSheet[5]["U"]) ||
                 !isset($allDataInSheet[5]["V"]) ||
                 !isset($allDataInSheet[5]["W"]) ||
-                !isset($allDataInSheet[5]["X"])
+                !isset($allDataInSheet[5]["X"]) ||
+                !isset($allDataInSheet[5]["Y"]) ||
+                !isset($allDataInSheet[5]["Z"])
 
             ) {
                 $error = 'File excel không đúng format!';
@@ -498,20 +501,20 @@ class UserController extends Controller
                 $user->hs_phucap_congtac_dang = trim($allDataInSheet[$i]["O"]);
                 $user->phucap_congtac_dang = trim($allDataInSheet[$i]["P"]);
                 $user->hs_luong_tang_them = trim($allDataInSheet[$i]["Q"]);
-                $user->luong_tang_them = trim($allDataInSheet[$i]["R"]);///sss
-//                $user->hs_quan_li_phi = trim($allDataInSheet[$i]["S"]);
-//                $user->quan_li_phi = trim($allDataInSheet[$i]["T"]);
-                $user->tong_thu_nhap = trim($allDataInSheet[$i]["S"]);
-                $user->khautru_BHXH = trim($allDataInSheet[$i]["T"]);
-                $user->khautru_BHTN = trim($allDataInSheet[$i]["U"]);
-                $user->khautru_BHYT = trim($allDataInSheet[$i]["V"]);
-                $user->khautru_KPCD = trim($allDataInSheet[$i]["W"]);
-                $user->tong_khau_tru = trim($allDataInSheet[$i]["X"]);
-                $user->thue_TNCN = trim($allDataInSheet[$i]["Y"]);
-                $user->tru_tamung = trim($allDataInSheet[$i]["Z"]);
-                $user->chiphiphatsinhkhac = trim($allDataInSheet[$i]["AA"]);
-                $user->thuclinh = trim($allDataInSheet[$i]["AB"]);
-                $user->so_taikhoan_canhan = trim($allDataInSheet[$i]["AC"]);
+                $user->luong_tang_them = trim($allDataInSheet[$i]["R"]);
+                $user->hs_quan_li_phi = trim($allDataInSheet[$i]["S"]);
+                $user->quan_li_phi = trim($allDataInSheet[$i]["T"]);
+                $user->tong_thu_nhap = trim($allDataInSheet[$i]["U"]);
+                $user->khautru_BHXH = trim($allDataInSheet[$i]["V"]);
+                $user->khautru_BHTN = trim($allDataInSheet[$i]["W"]);
+                $user->khautru_BHYT = trim($allDataInSheet[$i]["X"]);
+                $user->khautru_KPCD = trim($allDataInSheet[$i]["Y"]);
+                $user->tong_khau_tru = trim($allDataInSheet[$i]["Z"]);
+                $user->thue_TNCN = trim($allDataInSheet[$i]["AA"]);
+                $user->tru_tamung = trim($allDataInSheet[$i]["AB"]);
+                $user->chiphiphatsinhkhac = trim($allDataInSheet[$i]["AC"]);
+                $user->thuclinh = trim($allDataInSheet[$i]["AD"]);
+                $user->so_taikhoan_canhan = trim($allDataInSheet[$i]["AE"]);
                 $users[] = $user;
                 $arrUserCodes[] = $user->macanbo;
 
@@ -554,8 +557,8 @@ class UserController extends Controller
         $dataUser['phucap_congtac_dang'] = str_replace(',', '',trim(Input::get('phucap_congtac_dang')));
         $dataUser['hs_luong_tang_them'] = str_replace(',', '',trim(Input::get('hs_luong_tang_them')));
         $dataUser['luong_tang_them'] = str_replace(',', '',trim(Input::get('luong_tang_them')));
-//        $dataUser['hs_quan_li_phi'] = str_replace(',', '',trim(Input::get('hs_quan_li_phi')));
-//        $dataUser['quan_li_phi'] = str_replace(',', '',trim(Input::get('quan_li_phi')));
+        $dataUser['hs_quan_li_phi'] = str_replace(',', '',trim(Input::get('hs_quan_li_phi')));
+        $dataUser['quan_li_phi'] = str_replace(',', '',trim(Input::get('quan_li_phi')));
         $dataUser['tong_thu_nhap'] = str_replace(',', '',trim(Input::get('tong_thu_nhap')));
         $dataUser['khautru_bhxh'] = str_replace(',', '',trim(Input::get('khautru_bhxh')));
         $dataUser['khautru_bhtn'] = str_replace(',', '',trim(Input::get('khautru_bhtn')));
@@ -599,8 +602,8 @@ class UserController extends Controller
                         'phucap_congtac_dang' => $dataUser['phucap_congtac_dang'],
                         'hs_luong_tang_them' => $dataUser['hs_luong_tang_them'],
                         'luong_tang_them' => $dataUser['luong_tang_them'],
-//                        'hs_quan_li_phi' => $dataUser['hs_quan_li_phi'],
-//                        'quan_li_phi' => $dataUser['quan_li_phi'],
+                        'hs_quan_li_phi' => $dataUser['hs_quan_li_phi'],
+                        'quan_li_phi' => $dataUser['quan_li_phi'],
                         'tong_thu_nhap' => $dataUser['tong_thu_nhap'],
                         'khautru_BHXH' => $dataUser['khautru_bhxh'],
                         'khautru_BHTN' => $dataUser['khautru_bhtn'],
@@ -634,8 +637,8 @@ class UserController extends Controller
                 $lpc->phucap_congtac_dang = $dataUser['phucap_congtac_dang'];
                 $lpc->hs_luong_tang_them = $dataUser['hs_luong_tang_them'];
                 $lpc->luong_tang_them = $dataUser['luong_tang_them'];
-//                $lpc->hs_quan_li_phi = $dataUser['hs_quan_li_phi'];
-//                $lpc->quan_li_phi = $dataUser['quan_li_phi'];
+                $lpc->hs_quan_li_phi = $dataUser['hs_quan_li_phi'];
+                $lpc->quan_li_phi = $dataUser['quan_li_phi'];
                 $lpc->tong_thu_nhap = $dataUser['tong_thu_nhap'];
                 $lpc->khautru_BHXH = $dataUser['khautru_bhxh'];
                 $lpc->khautru_BHTN = $dataUser['khautru_bhtn'];

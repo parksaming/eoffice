@@ -184,33 +184,33 @@ $userRoles = App\Models\User::$roles;
         $('#dl-menu').dlmenu();
     });
 
-    function getNoVanBanDenNew() {
-        $.get("{{ route('getvanbandennew') }}", (res) => {
-            if (!res.error) {
-                if (res.number) {
-                    $('.no-vbden-new').text(res.number).removeClass('hidden')
-                    $('.no-vbden-new').closest('.parent-notifi').find('.notifi').removeClass('hidden')
-                } else {
-                    $('.no-vbden-new').text(res.number).addClass('hidden')
-                    $('.no-vbden-new').closest('.parent-notifi').find('.notifi').addClass('hidden')
-                }
-            }
-        }, 'json')
-    }
+    {{--function getNoVanBanDenNew() {--}}
+    {{--    $.get("{{ route('getvanbandennew') }}", (res) => {--}}
+    {{--        if (!res.error) {--}}
+    {{--            if (res.number) {--}}
+    {{--                $('.no-vbden-new').text(res.number).removeClass('hidden')--}}
+    {{--                $('.no-vbden-new').closest('.parent-notifi').find('.notifi').removeClass('hidden')--}}
+    {{--            } else {--}}
+    {{--                $('.no-vbden-new').text(res.number).addClass('hidden')--}}
+    {{--                $('.no-vbden-new').closest('.parent-notifi').find('.notifi').addClass('hidden')--}}
+    {{--            }--}}
+    {{--        }--}}
+    {{--    }, 'json')--}}
+    {{--}--}}
 
-    function getNoVanBanDenNewDonvi() {
-        $.get("{{ route('getvanbandennew_donvi') }}", (res) => {
-            if (!res.error) {
-                if (res.number) {
-                    $('.no-vbden-new_donvi').text(res.number).removeClass('hidden')
-                    $('.no-vbden-new_donvi').closest('.parent-notifi').find('.notifi').removeClass('hidden')
-                } else {
-                    $('.no-vbden-new_donvi').text(res.number).addClass('hidden')
-                    $('.no-vbden-new_donvi').closest('.parent-notifi').find('.notifi').addClass('hidden')
-                }
-            }
-        }, 'json')
-    }
+    {{--function getNoVanBanDenNewDonvi() {--}}
+    {{--    $.get("{{ route('getvanbandennew_donvi') }}", (res) => {--}}
+    {{--        if (!res.error) {--}}
+    {{--            if (res.number) {--}}
+    {{--                $('.no-vbden-new_donvi').text(res.number).removeClass('hidden')--}}
+    {{--                $('.no-vbden-new_donvi').closest('.parent-notifi').find('.notifi').removeClass('hidden')--}}
+    {{--            } else {--}}
+    {{--                $('.no-vbden-new_donvi').text(res.number).addClass('hidden')--}}
+    {{--                $('.no-vbden-new_donvi').closest('.parent-notifi').find('.notifi').addClass('hidden')--}}
+    {{--            }--}}
+    {{--        }--}}
+    {{--    }, 'json')--}}
+    {{--}--}}
 
     function getNoVanBanNoiBoNew() {
         $.get("{{ route('getvanbannoibonew') }}", (res) => {
