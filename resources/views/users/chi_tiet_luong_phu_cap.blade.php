@@ -24,7 +24,7 @@
                                 <th colspan="2" class="column-title"  style="text-align: center">Phụ cấp khác</th>
                                 <th colspan="2" class="column-title" style="text-align: center">Phụ cấp Công tác Đảng</th>
                                 <th colspan="2" class="column-title"  style="text-align: center">Lương tăng thêm</th>
-{{--                                <th colspan="2" class="column-title" style="text-align: center">Quản lý phí</th>--}}
+                                <th colspan="2" class="column-title" style="text-align: center">Quản lý phí</th>
                                 <th rowspan="2" class="column-title"  style="text-align: center">Tổng thu nhập</th>
                                 <th colspan="5" class="column-title" style="text-align: center">Khấu trừ</th>
                                 <th rowspan="2" class="column-title"  style="text-align: center">Thuế TNCN</th>
@@ -50,8 +50,8 @@
                                 <th class="column-title"  style="text-align: center">Số tiền</th>
                                 <th class="column-title"  style="text-align: center">Hệ số</th>
                                 <th class="column-title"  style="text-align: center">Số tiền</th>
-{{--                                <th class="column-title"  style="text-align: center">Hệ số</th>--}}
-{{--                                <th class="column-title"  style="text-align: center">Số tiền</th>--}}
+                                <th class="column-title"  style="text-align: center">Hệ số</th>
+                                <th class="column-title"  style="text-align: center">Số tiền</th>
                                 <th class="column-title"  style="text-align: center">BHXH</th>
                                 <th class="column-title"  style="text-align: center">BHTN</th>
                                 <th class="column-title"  style="text-align: center">BHYT</th>
@@ -86,9 +86,9 @@
                                             <td>{{number_format($value->phucap_congtac_dang,0,',',',')}}</td>
                                             <td>{{$value->hs_luong_tang_them}}</td>
                                             <td>{{number_format($value->luong_tang_them,0,',',',')}}</td>
-{{--                                            <td>{{$value->hs_quan_li_phi}}</td>--}}
+                                            <td>{{$value->hs_quan_li_phi}}</td>
 
-{{--                                            <td>{{number_format($value->quan_li_phi,0,',',',')}}</td>--}}
+                                            <td>{{number_format($value->quan_li_phi,0,',',',')}}</td>
                                             <td>{{number_format($value->tong_thu_nhap,0,',',',')}}</td>
                                             <td>{{number_format($value->khautru_BHXH,0,',',',')}}</td>
                                             <td>{{number_format($value->khautru_BHTN,0,',',',')}}</td>

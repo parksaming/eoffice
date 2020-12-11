@@ -62,7 +62,7 @@
                 <table class="table table-bordered table-striped tablescroll-vertical-line-right">
                     <thead class="head-table">
                     <tr>
-                        <th rowspan="2" class="w-nowrap h-head">Mã cán bộ</th>
+{{--                        <th rowspan="2" class="w-nowrap h-head">Mã cán bộ</th>--}}
                         <th rowspan="2" class="w-nowrap h-head">Họ và tên</th>
 
                     </tr>
@@ -71,7 +71,7 @@
                     <tbody>
                     <?php if(isset($users) && sizeof($users) > 0) :?>
                     <tr class="w-nowrap">
-                        <td class="text-center">{{$users->macanbo}}</td>
+{{--                        <td class="text-center">{{$users->macanbo}}</td>--}}
                         <td>{{$users->fullname}}</td>
                     </tr>
                     <?php else:?>
@@ -153,7 +153,7 @@
                     </tr>
                     <?php else:?>
                     <tr class="w-nowrap">
-                        <td colspan="22">Không có dữ liệu</td>
+                        <td colspan="25">Không có dữ liệu</td>
                     </tr>
                     <?php endif?>
                     </tbody>
@@ -173,7 +173,7 @@
                         <th class="w-nowrap text-center" colspan="2">Phụ cấp khác</th>
                         <th class="w-nowrap text-center" colspan="2">Phụ cấp Công tác Đảng</th>
                         <th class="w-nowrap text-center" colspan="2">Lương tăng thêm</th>
-{{--                        <th class="w-nowrap text-center" colspan="2">Quản lý phí</th>--}}
+                        <th class="w-nowrap text-center" colspan="2">Quản lý phí</th>
                         <th rowspan="2" class="w-nowrap text-center">Tổng thu nhập</th>
                         <th class="w-nowrap text-center" colspan="5">Khấu trừ</th>
 
@@ -202,8 +202,8 @@
                         <th class="w-nowrap">Số tiền</th>
                         <th class="w-nowrap">Hệ số</th>
                         <th class="w-nowrap">Số tiền</th>
-{{--                        <th class="w-nowrap">Hệ số</th>--}}
-{{--                        <th class="w-nowrap">Số tiền</th>--}}
+                        <th class="w-nowrap">Hệ số</th>
+                        <th class="w-nowrap">Số tiền</th>
 
                         <th class="w-nowrap">BHXH</th>
                         <th class="w-nowrap">BHTN</th>
@@ -233,8 +233,8 @@
                         <td>{{number_format($users->phucap_congtac_dang,0,',',',')}}</td>
                         <td>{{$users->hs_luong_tang_them}}</td>
                         <td>{{number_format($users->luong_tang_them,0,',',',')}}</td>
-{{--                        <td>{{$users->hs_quan_li_phi}}</td>--}}
-{{--                        <td>{{number_format($users->quan_li_phi,0,',',',')}}</td>--}}
+                        <td>{{$users->hs_quan_li_phi}}</td>
+                        <td>{{number_format($users->quan_li_phi,0,',',',')}}</td>
                         <td>{{number_format($users->tong_thu_nhap,0,',',',')}}</td>
                         <td>{{number_format($users->khautru_BHXH,0,',',',')}}</td>
                         <td>{{number_format($users->khautru_BHTN,0,',',',')}}</td>
@@ -249,7 +249,7 @@
                     </tr>
                     <?php else:?>
                     <tr class="w-nowrap">
-                        <td colspan="22">Không có dữ liệu</td>
+                        <td colspan="29">Không có dữ liệu</td>
                     </tr>
                     <?php endif?>
                     </tbody>

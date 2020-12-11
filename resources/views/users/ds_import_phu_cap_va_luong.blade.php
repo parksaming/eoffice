@@ -25,7 +25,7 @@
                                 <th colspan="2" class="column-title"  style="text-align: center">Phụ cấp khác</th>
                                 <th colspan="2" class="column-title" style="text-align: center">Phụ cấp Công tác Đảng</th>
                                 <th colspan="2" class="column-title"  style="text-align: center">Lương tăng thêm</th>
-{{--                                <th colspan="2" class="column-title" style="text-align: center">Quản lý phí</th>--}}
+                                <th colspan="2" class="column-title" style="text-align: center">Quản lý phí</th>
                                 <th rowspan="2" class="column-title"  style="text-align: center">Tổng thu nhập</th>
                                 <th colspan="5" class="column-title" style="text-align: center">Khấu trừ</th>
                                 <th rowspan="2" class="column-title"  style="text-align: center">Thuế TNCN</th>
@@ -51,8 +51,8 @@
                                 <th class="column-title"  style="text-align: center">Số tiền</th>
                                 <th class="column-title"  style="text-align: center">Hệ số</th>
                                 <th class="column-title"  style="text-align: center">Số tiền</th>
-{{--                                <th class="column-title"  style="text-align: center">Hệ số</th>--}}
-{{--                                <th class="column-title"  style="text-align: center">Số tiền</th>--}}
+                                <th class="column-title"  style="text-align: center">Hệ số</th>
+                                <th class="column-title"  style="text-align: center">Số tiền</th>
                                 <th class="column-title"  style="text-align: center">BHXH</th>
                                 <th class="column-title"  style="text-align: center">BHTN</th>
                                 <th class="column-title"  style="text-align: center">BHYT</th>
@@ -118,8 +118,8 @@
                                             <td>{{$user->phucap_congtac_dang}}</td>
                                             <td>{{$user->hs_luong_tang_them}}</td>
                                             <td>{{$user->luong_tang_them}}</td>
-{{--                                            <td>{{$user->hs_quan_li_phi}}</td>--}}
-{{--                                            <td>{{$user->quan_li_phi}}</td>--}}
+                                            <td>{{$user->hs_quan_li_phi}}</td>
+                                            <td>{{$user->quan_li_phi}}</td>
                                             <td>{{$user->tong_thu_nhap}}</td>
                                             <td>{{$user->khautru_BHXH}}</td>
                                             <td>{{$user->khautru_BHTN}}</td>
@@ -166,8 +166,8 @@
                                                    data-phucap_congtac_dang="{{ $user->phucap_congtac_dang }}"
                                                    data-hs_luong_tang_them="{{ $user->hs_luong_tang_them }}"
                                                    data-luong_tang_them="{{ $user->luong_tang_them }}"
-{{--                                                   data-hs_quan_li_phi="{{ $user->hs_quan_li_phi }}"--}}
-{{--                                                   data-quan_li_phi="{{ $user->quan_li_phi }}"--}}
+                                                   data-hs_quan_li_phi="{{ $user->hs_quan_li_phi }}"
+                                                   data-quan_li_phi="{{ $user->quan_li_phi }}"
                                                    data-tong_thu_nhap="{{ $user->tong_thu_nhap }}"
                                                    data-khautru_bhxh="{{ $user->khautru_BHXH }}"
                                                    data-khautru_bhtn="{{ $user->khautru_BHTN }}"
@@ -268,8 +268,8 @@
                 phucap_congtac_dang: itemUser.data('phucap_congtac_dang'),
                 hs_luong_tang_them: itemUser.data('hs_luong_tang_them'),
                 luong_tang_them: itemUser.data('luong_tang_them'),
-                // hs_quan_li_phi: itemUser.data('hs_quan_li_phi'),
-                // quan_li_phi: itemUser.data('quan_li_phi'),
+                hs_quan_li_phi: itemUser.data('hs_quan_li_phi'),
+                quan_li_phi: itemUser.data('quan_li_phi'),
                 tong_thu_nhap: itemUser.data('tong_thu_nhap'),
                 khautru_bhxh: itemUser.data('khautru_bhxh'),
                 khautru_bhtn: itemUser.data('khautru_bhtn'),

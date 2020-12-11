@@ -119,27 +119,27 @@
 
             </tr>
 
-{{--            <tr>--}}
-{{--                <td style="text-align: center" rowspan="2">9</td>--}}
-{{--                <td rowspan="2">Quản lý phí</td>--}}
-{{--                <th style="font-weight: 100;text-align: left;height: 40px" scope="colgroup">Hệ số</th>--}}
-{{--                <th scope="colgroup" style="text-align: right;height: 40px">{{$data['hs_quan_li_phi']}}</th>--}}
-{{--            </tr>--}}
-{{--            <tr>--}}
-{{--                <th style="font-weight: 100;text-align: left;height: 40px"  scope="col">Số tiền</th>--}}
-{{--                <th scope="col" style="text-align: right;height: 40px">{{number_format($data['quan_li_phi'],0,',',',')}} đ</th>--}}
+            <tr>
+                <td style="text-align: center" rowspan="2">9</td>
+                <td rowspan="2">Quản lý phí</td>
+                <th style="font-weight: 100;text-align: left;height: 40px" scope="colgroup">Hệ số</th>
+                <th scope="colgroup" style="text-align: right;height: 40px">{{$data['hs_quan_li_phi']}}</th>
+            </tr>
+            <tr>
+                <th style="font-weight: 100;text-align: left;height: 40px"  scope="col">Số tiền</th>
+                <th scope="col" style="text-align: right;height: 40px">{{number_format($data['quan_li_phi'],0,',',',')}} đ</th>
 
-{{--            </tr>--}}
+            </tr>
 
 
             <tr>
-                <td style="text-align: center">9</td>
+                <td style="text-align: center">10</td>
                 <th scope="row" style="text-align: left;font-weight: 100;height: 40px">Tổng thu nhập</th>
                 <td colspan="2" style="text-align: right;font-weight: 700">{{number_format($data['tong_thu_nhap'],0,',',',')}} đ</td>
             </tr>
 
             <tr>
-                <td style="text-align: center" rowspan="5">10</td>
+                <td style="text-align: center" rowspan="5">11</td>
                 <td rowspan="5">Khấu trừ</td>
                 <th style="font-weight: 100;text-align: left;height: 40px"  scope="colgroup">BHXH</th>
                 <th scope="colgroup" style="text-align: right;">{{number_format($data['khautru_BHXH'],0,',',',')}} đ</th>
@@ -163,17 +163,17 @@
 
 
             <tr>
-                <td style="text-align: center;background: #ed7d31">11</td>
+                <td style="text-align: center;background: #ed7d31">12</td>
                 <th style="text-align: left;font-weight: 700;background: #ed7d31;height: 40px" scope="row">Thuế TNCN</th>
                 <td colspan="2" style="text-align: right;font-weight: 700;background: #ed7d31">{{number_format($data['thue_TNCN'],0,',',',')}} đ</td>
             </tr>
             <tr>
-                <td style="text-align: center;background: #ed7d31" >12</td>
+                <td style="text-align: center;background: #ed7d31" >13</td>
                 <th  style="text-align: left;font-weight: 700;background: #ed7d31;height: 40px" scope="row">Trừ tạm ứng, nợ thuế</th>
                 <td colspan="2" style="text-align: right;font-weight: 700;background: #ed7d31">{{number_format($data['tru_tamung'],0,',',',')}} đ</td>
             </tr>
             <tr>
-                <td style="text-align: center;background: #ed7d31" >13</td>
+                <td style="text-align: center;background: #ed7d31" >14</td>
                 <th style="text-align: left;font-weight: 700;background: #ed7d31;height: 40px" scope="row">Trừ các khoản khác</th>
                 <td colspan="2" style="text-align: right;font-weight: 700;background: #ed7d31">{{number_format($data['chiphiphatsinhkhac'],0,',',',')}} đ</td>
             </tr>
@@ -194,7 +194,7 @@
     <div class="tablescroll-scroll dragscroll dragscroll-tb tb-end ">
             <h3 style="font-family: 'Times New Roman',serif; font-variant: normal!important;">I. Các khoản tính thuế</h3>
             <table class="table table-bordered table-striped txt-center" border="1" width="100%" style="border-collapse:collapse;text-align: center; width: 50%; margin-left:auto; margin-right:auto;font-family:'Times New Roman', serif;font-variant:normal;font-size: 1rem;">
-
+                {{ dd($data) }}
                 <tr>
                     <th scope="row" style="text-align: center;font-weight: 700;background: #ffe599;font-size: 1rem;">STT</th>
                     <th scope="row" style="text-align: center;font-weight: 700;background: #ffe599;height: 40px">Danh mục</th>
@@ -422,5 +422,5 @@
     </div>
     <?php endif;?>
     <br>
-    <p>Chi tiết tra cứu vui lòng truy cập hệ thống <a href="http://dieuhanh.udn.vn/"> Điều hành tác nghiệp</a> để xem thêm. Hoặc liên hệ: Huỳnh Thị Nổi - Ban KHTC - SĐT: 0777 410 792 - Email: htnoi@ac.udn.vn</p>
+    <p>Chi tiết tra cứu vui lòng truy cập hệ thống <a href="http://dieuhanh.ute.udn.vn/"> Điều hành tác nghiệp</a> để xem thêm. Hoặc liên hệ phòng Kế hoạch tài chính</p>
 </div>
