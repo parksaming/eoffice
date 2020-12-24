@@ -505,13 +505,13 @@ function sendMailMailer($data, $template, $subject, $toUsers, $fromUser = null)
 //            $mail->addAddress(config('mailluong.from.address'), isset($data->fullname) ? $data->fullname : '');
             $mail->isSMTP();
             $mail->CharSet = 'UTF-8';
-            $mail->Host = getenv('MAIL_HOST');
+            $mail->Host = 'smtp.office365.com';
             $mail->Port       = 587;
             $mail->SMTPSecure = 'tls';
             $mail->SMTPAuth   = true;
-            $mail->Username = getenv('MAIL_USERNAME');
-            $mail->Password = getenv('MAIL_PASSWORD');
-            $mail->SetFrom(getenv('MAIL_USERNAME'), 'Điều Hành Tác Nghiệp');
+            $mail->Username = 'khtc_dhspkt@ute.udn.vn';
+            $mail->Password = 'Khtcdhspkt123456';
+            $mail->SetFrom('khtc_dhspkt@ute.udn.vn', 'Điều Hành Tác Nghiệp');
             $mail->addAddress($emailUser, isset($data->fullname) ? $data->fullname : '');
 //$mail->SMTPDebug  = 3;
 //$mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";}; //$mail->Debugoutput = 'echo';
