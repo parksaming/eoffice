@@ -38,6 +38,7 @@
                     <th class="text-center">Số lượng</th>
                     <th class="text-center">Gửi Mail</th>
                     <th class="text-center">Xem</th>
+                    <th class="text-center">Xoá</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -66,6 +67,9 @@
                         </td>
                         <td class="text-center">
                            <a href="{{route($path, $value['date'])}}" title="Xem chi tiết"><i class="fa fa-eye"> </i></a>
+                        </td>
+                        <td class="text-center">
+                            <a onclick="return confirm('Bạn có chắn chắc muốn xoá?')" href="{{route('xoa_danh_sach_import_luong',[$pathDelete, $value['date']])}}" title="Xoá"><i class="fa fa-trash-o"> </i></a>
                         </td>
                     </tr>
                 @endforeach
