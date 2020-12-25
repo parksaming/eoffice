@@ -100,6 +100,7 @@ class UserController extends Controller
         $status = Input::get('status', 'luongvaphucap');
         if ($status == 'luongvaphucap') {
             $path = 'chi_tiet_luong_phu_cap';
+            $pathDelete = 'xoa_danh_sach_lpc';
             $count = LuongPhuCap::select('users.fullname', 'date', 'nguoinhap_id', 'created_at')
                 ->join('users', 'users.id', '=', 'thanhtoan_luong_phucap.nguoinhap_id')
                 ->groupBy('date')
@@ -121,6 +122,7 @@ class UserController extends Controller
 
         } else if($status == 'tonghopthunhap') {
             $path = 'chi_tiet_tong_hop_thu_nhap';
+            $pathDelete = 'xoa_danh_sach_thtn';
             $count = TongHopThuNhap::select('users.fullname', 'date', 'nguoinhap_id', 'created_at')
                 ->join('users', 'users.id', '=', 'tonghop_thunhap.nguoinhap_id')->groupBy('date')
                 ->count();
@@ -140,6 +142,7 @@ class UserController extends Controller
 
         }else{
             $path = 'chi_tiet_tong_hop_thu_nhap_khac';
+            $pathDelete = 'xoa_danh_sach_tnk';
             $count = TongHopThuNhapKhac::select('users.fullname', 'date', 'nguoinhap_id', 'created_at')
                 ->join('users', 'users.id', '=', 'tonghop_thunhap_khac.nguoinhap_id')->groupBy('date')
                 ->count();
@@ -158,7 +161,7 @@ class UserController extends Controller
             endforeach;
         }
 
-        return view('users.import_luong', compact('date', 'result', 'status', 'path','count','numberUser'));
+        return view('users.import_luong', compact('date', 'result', 'status', 'path','count','numberUser','pathDelete'));
     }
 
     public function chi_tiet_luong_phu_cap($date)
@@ -183,6 +186,27 @@ class UserController extends Controller
         $date = date_format(new DateTime($date), 'm/Y');
 
         return view('users.chi_tiet_tong_hop_thu_nhap_khac', compact('thtnk', 'date'));
+    }
+
+    //delete impor luong
+    public function xoa_danh_sach_import_luong($action,$date){
+        if ($action){
+            switch ($action)
+            {
+                case 'xoa_danh_sach_lpc':
+                    LuongPhuCap::where('date', $date)->delete();
+                    break;
+                case 'xoa_danh_sach_thtn':
+                    TongHopThuNhap::where('date', $date)->delete();
+                    break;
+                case 'xoa_danh_sach_thtn':
+                    break;
+                case 'xoa_danh_sach_tnk':
+                    TongHopThuNhapKhac::where('date', $date)->delete();
+                    break;
+            }
+        }
+        return redirect(route('import_luong'));
     }
 
     public function import_update_thu_thue(Request $request)

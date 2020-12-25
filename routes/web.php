@@ -538,6 +538,8 @@ Route::group(['middleware' => ['role_admin']], function () {
     Route::get('chi-tiet-luong-phu-cap/{date}', 'UserController@chi_tiet_luong_phu_cap')->name('chi_tiet_luong_phu_cap');
     Route::get('chi-tiet-tong-hop-thu-nhap/{date}', 'UserController@chi_tiet_tong_hop_thu_nhap')->name('chi_tiet_tong_hop_thu_nhap');
     Route::get('chi-tiet-tong-hop-thu-nhap_khac/{date}', 'UserController@chi_tiet_tong_hop_thu_nhap_khac')->name('chi_tiet_tong_hop_thu_nhap_khac');
+    //delete
+    Route::get('xoa_danh_sach_import_luong/{action}/{date}', 'UserController@xoa_danh_sach_import_luong')->name('xoa_danh_sach_import_luong');
     Route::post('gui-mail-luong', [
         'as'    =>  'gui_mail_luong',
         'uses'  =>  'UserController@gui_mail_luong'
