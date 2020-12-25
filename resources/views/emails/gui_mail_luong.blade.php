@@ -421,5 +421,5 @@
     </div>
     <?php endif;?>
     <br>
-    <p>Chi tiết tra cứu vui lòng truy cập hệ thống <a href="http://dieuhanh.ute.udn.vn/"> Điều hành tác nghiệp</a> để xem thêm. Hoặc liên hệ phòng Kế hoạch tài chính</p>
+    <p>Chi tiết tra cứu vui lòng truy cập hệ thống <a href="http://dieuhanh.ute.udn.vn/"> Điều hành tác nghiệp</a> để xem thêm. Hoặc liên hệ: Nguyễn Song Ly - Phòng KHTC - SĐT: 0906535848 - Email: nsly@ute.udn.vn</p>
 </div>
