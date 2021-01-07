@@ -69,7 +69,7 @@
                                             <td style="text-align: left;white-space: nowrap;">{{$value->fullname}}</td>
                                             <td style="text-align: left;">{{$value->hs_luong_ngach_bac}}</td>
                                             <td style="text-align: left;">{{number_format($value->luong_ngach_bac,0,',',',')}}</td>
-                                            <td>{{number_format($value->hs_phucap_chucvu,0,',',',')}}</td>
+                                            <td>{{$value->hs_phucap_chucvu}}</td>
                                             <td>{{number_format($value->phucap_chucvu,0,',',',')}}</td>
                                             <td>{{$value->tyle_phucap_thamnien_vuotkhung}}</td>
 
