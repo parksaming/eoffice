@@ -1,9 +1,4 @@
 <script>
-    $(document).ready(function(){
-        $(".scroll_detail_salary").scroll(function(){
-
-        });
-    });
     var lastScrollTop = 0;
     $('.scroll_detail_salary').scroll(function(event){
         var st = $(this).scrollTop();
