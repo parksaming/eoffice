@@ -9,38 +9,38 @@
         <div class="page-content col-md-12 col-sm-12">
             <div class="clearfix"></div>
             <div class="table-responsive" style="margin-top: 15px;">
-                    <div style="overflow: auto;">
+                    <div class="scroll_detail_salary">
                         <table class="table table-bordered table-striped bulk_action dragscroll tb-dragscroll">
                             <thead class="head-table">
                             <tr class="headings" style="text-align: center">
-                                <th class="column-title col-index" style="text-align: center">STT</th>
-                                <th class="column-title" style="text-align: left;white-space: nowrap;">Mã cán bộ</th>
-                                <th class="column-title" style="text-align: left;white-space: nowrap;">Họ và tên</th>
-                                <th class="column-title" style="text-align: left">Lương ngạch bậc</th>
-                                <th class="column-title" style="text-align: center">Phụ cấp chức vụ</th>
-                                <th class="column-title"  style="text-align: center">Quản lý phí</th>
-                                <th class="column-title"  style="text-align: center">Phụ cấp Công tác Đảng</th>
-                                <th class="column-title"  style="text-align: center">Lương tăng thêm</th>
-                                <th class="column-title"  style="text-align: center">PC TN vượt khung</th>
-                                <th class="column-title"  style="text-align: center">Phụ cấp khác</th>
-                                <th class="column-title"  style="text-align: center">Tiền giảng</th>
-                                <th class="column-title"  style="text-align: center">Tiền công NCKH</th>
-                                <th class="column-title"  style="text-align: center">Phúc lợi</th>
-                                <th class="column-title"  style="text-align: center">Lương tháng 13</th>
-                                <th class="column-title"  style="text-align: center">Thu nhập khác</th>
-                                <th class="column-title"  style="text-align: center">Tổng</th>
-                                <th class="column-title"  style="text-align: center">PC TN nghề</th>
-                                <th class="column-title"  style="text-align: center">PC ưu đãi nghề</th>
-                                <th class="column-title"  style="text-align: center">Tổng</th>
-                                <th class="column-title"  style="text-align: center">Bảo hiểm thât nghiệp trừ vào lương</th>
-                                <th class="column-title"  style="text-align: center">Bảo hiểm xã hội trừ vào lương</th>
-                                <th class="column-title"  style="text-align: center">Bảo hiểm y tế trừ vào lương</th>
-                                <th class="column-title"  style="text-align: center">Kinh phí công đoàn trừ vào lương</th>
-                                <th class="column-title"  style="text-align: center">Giảm trừ bản thân</th>
-                                <th class="column-title"  style="text-align: center">Tổng tiền giảm trừ người phụ thuộc</th>
-                                <th class="column-title"  style="text-align: center">Tổng</th>
-                                <th class="column-title"  style="text-align: center">Tổng thu nhập tính thuế</th>
-                                <th class="column-title"  style="text-align: center">Thuế TNCN</th>
+                                <th class="column-title scroll_thtn col-index" style="text-align: center">STT</th>
+                                <th class="column-title scroll_thtn" style="text-align: left;white-space: nowrap;">Mã cán bộ</th>
+                                <th class="column-title scroll_thtn" style="text-align: left;white-space: nowrap;">Họ và tên</th>
+                                <th class="column-title scroll_thtn" style="text-align: left">Lương ngạch bậc</th>
+                                <th class="column-title scroll_thtn" style="text-align: center">Phụ cấp chức vụ</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Quản lý phí</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Phụ cấp Công tác Đảng</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Lương tăng thêm</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">PC TN vượt khung</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Phụ cấp khác</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Tiền giảng</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Tiền công NCKH</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Phúc lợi</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Lương tháng 13</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Thu nhập khác</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Tổng</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">PC TN nghề</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">PC ưu đãi nghề</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Tổng</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Bảo hiểm thât nghiệp trừ vào lương</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Bảo hiểm xã hội trừ vào lương</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Bảo hiểm y tế trừ vào lương</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Kinh phí công đoàn trừ vào lương</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Giảm trừ bản thân</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Tổng tiền giảm trừ người phụ thuộc</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Tổng</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Tổng thu nhập tính thuế</th>
+                                <th class="column-title scroll_thtn"  style="text-align: center">Thuế TNCN</th>
                             </tr>
                             </thead>
                             <tbody>

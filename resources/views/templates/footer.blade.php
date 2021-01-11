@@ -1,3 +1,21 @@
+<script>
+    var lastScrollTop = 0;
+    $('.scroll_detail_salary').scroll(function(event){
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop){
+            $(".add_down").addClass("scroll_down head-table");
+            $(".add_down_two").addClass("scroll_top  head-table");
+            $(".scroll_top_one").addClass("top_head_scroll  head-table");
+        } else {
+            if (st === 0 ){
+                $(".add_down").removeClass("scroll_down");
+            }
+        }
+        lastScrollTop = st;
+    });
+
+
+</script>
 
 <div class="footer-fixed">
         <div class="col-sm-12 text-center" style="background: #2a528c">

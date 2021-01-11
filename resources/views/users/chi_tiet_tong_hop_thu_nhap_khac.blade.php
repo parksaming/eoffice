@@ -9,30 +9,30 @@
         <div class="page-content col-md-12 col-sm-12">
             <div class="clearfix"></div>
             <div class="table-responsive" style="margin-top: 15px;">
-                <div style="overflow: auto;">
+                <div class="scroll_detail_salary">
                     <table class="table table-bordered table-striped bulk_action dragscroll tb-dragscroll" style="display: inline-table;">
                         <thead class="head-table">
                         <tr class="headings" style="text-align: center">
-                            <th rowspan="2" class="column-title col-index" style="text-align: center">STT</th>
-                            <th rowspan="2" class="column-title" style="text-align: left;white-space: nowrap;">Mã cán bộ</th>
-                            <th rowspan="2" class="column-title" style="text-align: left;white-space: nowrap;">Họ và tên</th>
-                            <th colspan="2" class="column-title" style="text-align: center">Tiền giảng</th>
-                            <th colspan="2" class="column-title"  style="text-align: center">Quản lí phí</th>
-                            <th colspan="2" class="column-title"  style="text-align: center">Lương tăng thêm</th>
-                            <th colspan="2" class="column-title" style="text-align: center">Khoán điện thoại</th>
-                            <th rowspan="2" class="column-title" style="text-align: center">Thu nhập khác</th>
-                            <th rowspan="2" class="column-title" style="text-align: center">Trừ tạm ứng,thuế TNCN</th>
-                            <th rowspan="2" class="column-title" style="text-align: center">Thực nhận</th>
+                            <th rowspan="2" class="column-title col-index scroll_top_one top_head_scroll_tnk" style="text-align: center">STT</th>
+                            <th rowspan="2" class="column-title scroll_top_one top_head_scroll_tnk" style="text-align: left;white-space: nowrap;">Mã cán bộ</th>
+                            <th rowspan="2" class="column-title scroll_top_one top_head_scroll_tnk" style="text-align: left;white-space: nowrap;">Họ và tên</th>
+                            <th colspan="2" class="column-title tnk_menu add_down" style="text-align: center">Tiền giảng</th>
+                            <th colspan="2" class="column-title tnk_menu add_down"  style="text-align: center">Quản lí phí</th>
+                            <th colspan="2" class="column-title tnk_menu add_down"  style="text-align: center">Lương tăng thêm</th>
+                            <th colspan="2" class="column-title tnk_menu add_down" style="text-align: center">Khoán điện thoại</th>
+                            <th rowspan="2" class="column-title scroll_top_one top_head_scroll_tnk" style="text-align: center">Thu nhập khác</th>
+                            <th rowspan="2" class="column-title scroll_top_one top_head_scroll_tnk" style="text-align: center">Trừ tạm ứng,thuế TNCN</th>
+                            <th rowspan="2" class="column-title scroll_top_one top_head_scroll_tnk" style="text-align: center">Thực nhận</th>
                         </tr>
                         <tr class="headings" style="text-align: center">
-                            <th class="column-title" style="text-align: left">Số tiết</th>
-                            <th class="column-title" style="text-align: center">Số tiền</th>
-                            <th class="column-title"  style="text-align: center">Tổng hệ số</th>
-                            <th class="column-title"  style="text-align: center">Hệ số</th>
-                            <th class="column-title"  style="text-align: center">Tổng hệ số</th>
-                            <th class="column-title"  style="text-align: center">Số tiền</th>
-                            <th class="column-title"  style="text-align: center">Số tháng</th>
-                            <th class="column-title"  style="text-align: center">Số tiền</th>
+                            <th class="column-title add_down_two" style="text-align: left">Số tiết</th>
+                            <th class="column-title add_down_two" style="text-align: center">Số tiền</th>
+                            <th class="column-title add_down_two"  style="text-align: center">Tổng hệ số</th>
+                            <th class="column-title add_down_two"  style="text-align: center">Hệ số</th>
+                            <th class="column-title add_down_two"  style="text-align: center">Tổng hệ số</th>
+                            <th class="column-title add_down_two"  style="text-align: center">Số tiền</th>
+                            <th class="column-title add_down_two"  style="text-align: center">Số tháng</th>
+                            <th class="column-title add_down_two"  style="text-align: center">Số tiền</th>
                         </tr>
                         </thead>
                         <tbody>

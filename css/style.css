@@ -106,7 +106,7 @@ ol, ul {
     margin-top: 1px;
 }
 #fixnav{
-    background: url(../img/bg-header-2.png) left no-repeat, 
+    background: url(../img/bg-header-2.png) left no-repeat,
     url(../img/bg-header-3.png) right no-repeat,
     url(../img/bg-header-2.png) #fff;
 }
@@ -310,7 +310,7 @@ label.error{
     left: 0;
     top: 0;
     font-size: 30px;
-    margin: 10px; 
+    margin: 10px;
     background: white;
     padding: 5px;
     border-radius: 4px;
@@ -1031,7 +1031,7 @@ nav.menu-top:after{
 #calendar{
     padding: 20px;
     max-width: 710px;
-    background: white; 
+    background: white;
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.5s;
     animation-name: zoom;
@@ -1156,7 +1156,7 @@ i.edit_work{
 }
 
 .menu nav ul li a{
-    color: #fff; 
+    color: #fff;
 	border: none;
     border-radius: 0;
     margin-right: 0px;
@@ -1243,12 +1243,12 @@ i.edit_work{
 /* Add Animation */
 
 @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
+    from {-webkit-transform:scale(0)}
     to {-webkit-transform:scale(1)}
 }
 
 @keyframes zoom {
-    from {transform:scale(0)} 
+    from {transform:scale(0)}
     to {transform:scale(1)}
 }
 
@@ -2156,14 +2156,49 @@ ul.dropdown-menu.multi-column.columns-2 a:hover {
 }
 .tb-dragscroll {
     text-align: center;
-    display: block;
-    overflow-x: auto;
+    /*display: block;*/
+    /*overflow-x: auto;*/
     white-space: nowrap;
     cursor: pointer;
+}
+/*add code css 01/11/2021*/
+th.column-title{
+    position: sticky;
+    top: -1px;
 }
 .colorSendMail {
     color:#FF9800;
 }
 .ml-2 {
     margin-left: 0.875rem;
+}
+th.column-title.col-index {
+    position: sticky;
+    top: -1px;
+}
+.scroll_down{
+    box-shadow: inset 0 0px 0 #ddd, inset 0 -2px 0 #ddd;
+}
+th.column-title.scroll_top {
+    top: 32px;
+}
+.scroll_top{
+    top: 32px;
+}
+.top_head_scroll{
+    top: -2px !important;
+}
+.scroll_detail_salary{
+    overflow-y: auto ;
+    max-height: 550px;
+}
+.scroll_thtn{
+    background: #26a9e0;
+}
+th.column-title.tnk_menu.add_down.scroll_down.head-table {
+    top: -1px;
+}
+
+.top_head_scroll_tnk {
+    top: -3px !important;
 }
