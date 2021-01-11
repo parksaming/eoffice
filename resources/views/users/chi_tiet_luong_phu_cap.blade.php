@@ -9,54 +9,54 @@
         <div class="page-content col-md-12 col-sm-12">
             <div class="clearfix"></div>
             <div class="table-responsive" style="margin-top: 15px;">
-                    <div style="overflow: auto;">
+                    <div class="scroll_detail_salary">
                         <table class="table table-bordered table-striped bulk_action dragscroll tb-dragscroll">
                             <thead class="head-table">
                             <tr class="headings" style="text-align: center">
-                                <th rowspan="2" class="column-title col-index" style="text-align: center">STT</th>
-                                <th rowspan="2" class="column-title" style="text-align: left;white-space: nowrap;">Mã cán bộ</th>
-                                <th rowspan="2" class="column-title" style="text-align: left;white-space: nowrap;">Họ và tên</th>
-                                <th colspan="2" class="column-title" style="text-align: center">Lương ngạch bậc</th>
-                                <th colspan="2" class="column-title"  style="text-align: center">Phụ cấp chức vụ</th>
-                                <th colspan="2" class="column-title" style="text-align: center">Phụ cấp thâm niên vượt khung</th>
-                                <th colspan="2" class="column-title"  style="text-align: center">Phụ cấp thâm niên nghề</th>
-                                <th colspan="2" class="column-title" style="text-align: center">Phụ cấp ưu đãi nghề</th>
-                                <th colspan="2" class="column-title"  style="text-align: center">Phụ cấp khác</th>
-                                <th colspan="2" class="column-title" style="text-align: center">Phụ cấp Công tác Đảng</th>
-                                <th colspan="2" class="column-title"  style="text-align: center">Lương tăng thêm</th>
-                                <th colspan="2" class="column-title" style="text-align: center">Quản lý phí</th>
-                                <th rowspan="2" class="column-title"  style="text-align: center">Tổng thu nhập</th>
-                                <th colspan="5" class="column-title" style="text-align: center">Khấu trừ</th>
-                                <th rowspan="2" class="column-title"  style="text-align: center">Thuế TNCN</th>
-                                <th rowspan="2" class="column-title" style="text-align: center">Trừ tạm ứng, nợ thuế</th>
-                                <th rowspan="2" class="column-title"  style="text-align: center">Trừ các khoản khác</th>
-                                <th rowspan="2" class="column-title"  style="text-align: center">Thực lĩnh</th>
-                                <th rowspan="2" class="column-title" style="text-align: center">Số TK cá nhân</th>
+                                <th rowspan="2" class="column-title scroll_top_one col-index" style="text-align: center">STT</th>
+                                <th rowspan="2" class="column-title scroll_top_one" style="text-align: left;white-space: nowrap;">Mã cán bộ</th>
+                                <th rowspan="2" class="column-title scroll_top_one" style="text-align: left;white-space: nowrap;">Họ và tên</th>
+                                <th colspan="2" class="column-title add_down" style="text-align: center">Lương ngạch bậc</th>
+                                <th colspan="2" class="column-title add_down"  style="text-align: center">Phụ cấp chức vụ</th>
+                                <th colspan="2" class="column-title add_down" style="text-align: center">Phụ cấp thâm niên vượt khung</th>
+                                <th colspan="2" class="column-title add_down"  style="text-align: center">Phụ cấp thâm niên nghề</th>
+                                <th colspan="2" class="column-title add_down" style="text-align: center">Phụ cấp ưu đãi nghề</th>
+                                <th colspan="2" class="column-title add_down"  style="text-align: center">Phụ cấp khác</th>
+                                <th colspan="2" class="column-title add_down" style="text-align: center">Phụ cấp Công tác Đảng</th>
+                                <th colspan="2" class="column-title add_down"  style="text-align: center">Lương tăng thêm</th>
+                                <th colspan="2" class="column-title add_down" style="text-align: center">Quản lý phí</th>
+                                <th rowspan="2" class="column-title scroll_top_one"  style="text-align: center">Tổng thu nhập</th>
+                                <th colspan="5" class="column-title add_down" style="text-align: center">Khấu trừ</th>
+                                <th rowspan="2" class="column-title scroll_top_one"  style="text-align: center">Thuế TNCN</th>
+                                <th rowspan="2" class="column-title scroll_top_one" style="text-align: center">Trừ tạm ứng, nợ thuế</th>
+                                <th rowspan="2" class="column-title scroll_top_one"  style="text-align: center">Trừ các khoản khác</th>
+                                <th rowspan="2" class="column-title scroll_top_one"  style="text-align: center">Thực lĩnh</th>
+                                <th rowspan="2" class="column-title scroll_top_one" style="text-align: center">Số TK cá nhân</th>
                             </tr>
                             <tr class="headings" style="text-align: center">
-                                <th class="column-title" style="text-align: left">Hệ số</th>
-                                <th class="column-title" style="text-align: center">Số tiền</th>
-                                <th class="column-title"  style="text-align: center">Hệ số</th>
-                                <th class="column-title"  style="text-align: center">Số tiền</th>
-                                <th class="column-title"  style="text-align: center">Tỷ lệ</th>
-                                <th class="column-title"  style="text-align: center">Số tiền</th>
-                                <th class="column-title"  style="text-align: center">Tỷ lệ</th>
-                                <th class="column-title"  style="text-align: center">Số tiền</th>
-                                <th class="column-title"  style="text-align: center">Tỷ lệ</th>
-                                <th class="column-title"  style="text-align: center">Số tiền</th>
-                                <th class="column-title"  style="text-align: center">Hệ số</th>
-                                <th class="column-title"  style="text-align: center">Số tiền</th>
-                                <th class="column-title"  style="text-align: center">Hệ số</th>
-                                <th class="column-title"  style="text-align: center">Số tiền</th>
-                                <th class="column-title"  style="text-align: center">Hệ số</th>
-                                <th class="column-title"  style="text-align: center">Số tiền</th>
-                                <th class="column-title"  style="text-align: center">Hệ số</th>
-                                <th class="column-title"  style="text-align: center">Số tiền</th>
-                                <th class="column-title"  style="text-align: center">BHXH</th>
-                                <th class="column-title"  style="text-align: center">BHTN</th>
-                                <th class="column-title"  style="text-align: center">BHYT</th>
-                                <th class="column-title"  style="text-align: center">KPCĐ</th>
-                                <th class="column-title"  style="text-align: center">Tổng</th>
+                                <th class="column-title add_down_two " style="text-align: left">Hệ số</th>
+                                <th class="column-title add_down_two" style="text-align: center">Số tiền</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Hệ số</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Số tiền</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Tỷ lệ</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Số tiền</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Tỷ lệ</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Số tiền</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Tỷ lệ</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Số tiền</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Hệ số</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Số tiền</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Hệ số</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Số tiền</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Hệ số</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Số tiền</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Hệ số</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Số tiền</th>
+                                <th class="column-title add_down_two"  style="text-align: center">BHXH</th>
+                                <th class="column-title add_down_two"  style="text-align: center">BHTN</th>
+                                <th class="column-title add_down_two"  style="text-align: center">BHYT</th>
+                                <th class="column-title add_down_two"  style="text-align: center">KPCĐ</th>
+                                <th class="column-title add_down_two"  style="text-align: center">Tổng</th>
                             </tr>
                             </thead>
                             <tbody>
