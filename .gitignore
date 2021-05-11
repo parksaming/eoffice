@@ -57,6 +57,5 @@ resources/lang/fr/
 resources/lang/pt-BR/
 files/
 app/Http/Controllers/Auth/MasterKeyCloak/MasterKeyCloak.php
-*.sql
 
 /.phpintel*
